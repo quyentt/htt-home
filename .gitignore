@@ -10,3 +10,6 @@ Desktop.ini
 *.swp
 .vscode/
 .idea/
+
+# Spec nội bộ, không phát hành cùng site
+CLAUDE.md
