@@ -1,0 +1,12 @@
+# Source design files: the Figma export, the original font and Bootstrap
+# packages. They are the input to the build, not part of the delivered site.
+Data/
+
+# OS / editor noise
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/

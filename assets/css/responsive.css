@@ -1,0 +1,685 @@
+@media (max-width: 1439px) {
+
+    /* No room beside the container at this width - bring the arrows inside. */
+    .testimonials-slider-wrap {
+        padding: 0 60px;
+    }
+
+    .testimonials-arrow-prev {
+        left: 0;
+    }
+
+    .testimonials-arrow-next {
+        right: 0;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr 560px;
+    }
+
+    .story-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 250px 250px;
+    }
+
+    .knowledge-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .video-grid {
+        grid-template-columns: 1.6fr 1fr 1fr;
+    }
+
+    .article-card-row {
+        grid-template-columns: 240px 1fr;
+    }
+}
+
+/* Mulish ExtraBold 16px fills the whole 1370px header container, so the bar is
+   tightened over this range and drops to the burger menu below it. */
+@media (min-width: 1280px) and (max-width: 1420px) {
+    .main-nav-list {
+        gap: 15px;
+    }
+
+    .main-nav-link {
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .site-logo img {
+        width: 64px;
+    }
+
+    .site-header-actions {
+        gap: 12px;
+    }
+
+    .header-cta {
+        padding: 12px 22px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        overflow-y: auto;
+        background-color: var(--color-surface);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity var(--transition-base) var(--easing),
+            transform var(--transition-base) var(--easing),
+            visibility var(--transition-base) var(--easing);
+    }
+
+    .main-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .main-nav-item+.main-nav-item {
+        border-top: 1px solid var(--color-border);
+    }
+
+    .main-nav-item.is-active::before {
+        display: none;
+    }
+
+    .main-nav-link {
+        justify-content: space-between;
+        padding: 16px 4px;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        min-width: 0;
+        padding: 0 0 12px 14px;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .main-nav-item.is-open>.submenu {
+        display: block;
+    }
+
+    .main-nav-item:hover>.submenu {
+        transform: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .process-step {
+        height: auto;
+    }
+
+    .consultation-form {
+        margin-top: 34px;
+    }
+
+    .consultation-section .section-title {
+        font-size: 34px !important;
+    }
+
+    .consultation-section .script-title {
+        font-size: 42px !important;
+    }
+
+    .projects-section .section-title .display-title {
+        font-size: 44px;
+    }
+
+    .certification-section {
+        padding: 40px 0;
+    }
+
+    .certification-pagination {
+        margin-top: 15px;
+    }
+
+    .hero-slider {
+        height: 520px;
+    }
+
+    .slider-arrow-prev {
+        left: 20px;
+    }
+
+    .slider-arrow-next {
+        right: 20px;
+    }
+
+    /* minmax(0, …) is required: a bare 1fr track sizes to its max-content, and
+       the certification Swiper feeds its own slide widths back into that. */
+    .story-layout,
+    .split-layout,
+    .works-section .split-layout,
+    .certification-layout,
+    .process-layout,
+    .knowledge-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Stacked on one column, a nested scroller is awkward - show every step. */
+    .process-list {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    /* One column: the tab row no longer sits beside the text. */
+    .works-section .split-content {
+        padding-top: 0;
+    }
+
+    .story-gallery {
+        grid-template-rows: 230px 230px;
+    }
+
+    .story-figure-tall {
+        grid-row: span 1;
+    }
+
+    .filter-list-stacked {
+        flex-direction: row;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .video-card-featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .video-card .video-card-image {
+        height: 200px;
+    }
+
+    .video-card-featured .video-card-image {
+        height: 320px;
+    }
+
+    .standards-layout {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 29px;
+    }
+
+    .standards-content {
+        grid-column: span 2;
+        order: -1;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .standards-content .dot-nav,
+    .standards-content .badge-pill {
+        margin-inline: auto;
+    }
+
+    .testimonials-slider-wrap {
+        padding: 0 60px;
+    }
+
+    .contact-section {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-figure img {
+        height: 360px;
+    }
+
+    .footer-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-column-contact {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 991px) {
+    .hotline-list {
+        gap: 15px;
+    }
+
+    .hotline-card {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .site-footer {
+        padding: 40px 0 0;
+    }
+
+    .video-grid {
+        gap: 15px;
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .script-title {
+        font-size: 68px;
+    }
+
+    .section-overline {
+        font-size: 26px;
+    }
+
+    .story-title .display-title,
+    .projects-section .section-title .display-title,
+    .standards-content .section-title .display-title {
+        font-size: 36px;
+    }
+
+    .projects-section .section-title .highlight,
+    .standards-content .section-title .subtitle {
+        font-size: 28px;
+    }
+
+    .consultation-section .script-title {
+        font-size: 38px;
+    }
+
+    /* Scoped because the desktop rule for this one is scoped too and would
+       otherwise keep its 115px past this breakpoint. */
+    .team-section .section-title .script-title {
+        font-size: 68px;
+    }
+
+    .consultation-section .section-title,
+    .works-section .split-content .section-title {
+        font-size: 32px;
+    }
+
+    .team-section .section-title .display-title {
+        font-size: 30px;
+    }
+
+    .hero-slider {
+        height: 420px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        height: 430px;
+    }
+
+    .project-grid,
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 240px;
+    }
+
+    .process-figure img {
+        height: 340px;
+    }
+
+    .standards-figure img {
+        height: 360px;
+    }
+
+    .team-collage {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 150px;
+    }
+
+    .team-figure {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .hotline-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-layout {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 40px;
+    }
+
+    .footer-column-contact {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-quote-center {
+        text-align: justify;
+        padding-left: 45px;
+    }
+
+    .section {
+        padding: 42px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .script-title {
+        font-size: 68px;
+    }
+
+    .section-tag {
+        font-size: 14px;
+    }
+
+    /* Tabs stay on a single swipeable row instead of wrapping. The negative
+       margin lets the row bleed to the screen edges so a cut-off tab reads as
+       "there is more", and "safe" keeps the first tab reachable once the row
+       overflows a centred container. */
+    .filter-list {
+        flex-wrap: nowrap;
+        justify-content: safe center;
+        margin-inline: -20px;
+        padding-inline: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+    }
+
+    .filter-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-list-stacked {
+        flex-direction: row;
+    }
+
+    .filter-button {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
+    .story-title .display-title,
+    .projects-section .section-title .display-title,
+    .standards-content .section-title .display-title {
+        font-size: 24px;
+    }
+
+    .story-title .display-title {
+        margin-top: 20px;
+    }
+
+    .consultation-section .script-title {
+        font-size: 30px;
+    }
+
+    .consultation-section .section-title,
+    .works-section .split-content .section-title {
+        font-size: 26px;
+    }
+
+    /* "Nhân sự của HTH HOME" has to hold one line on a phone: the glyphs run
+       about 12.6x the font size, so the size tracks the viewport below 390px. */
+    .team-section .section-title .display-title {
+        font-size: min(26px, 7.4vw - 3px);
+    }
+
+    .badge-pill,
+    .badge-pill-primary {
+        font-size: 16px;
+        padding: 11px 22px;
+    }
+
+    .hero-slider {
+        height: 300px;
+    }
+
+    .slider-arrow {
+        width: 42px;
+        height: 42px;
+        margin-top: -21px;
+        font-size: 15px;
+    }
+
+    .story-gallery {
+        grid-template-rows: 180px 180px;
+    }
+
+    .stats-grid {
+        gap: 22px 20px;
+        margin-top: 30px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        height: 400px;
+    }
+
+    .project-grid,
+    .work-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card-featured {
+        grid-column: span 1;
+    }
+
+    .video-card .video-card-image,
+    .video-card-featured .video-card-image {
+        height: 200px;
+    }
+
+    /* Eight open steps make a very long column on a phone, so the list turns
+       into an accordion: the step that is active - the one already driving the
+       photo below - is the only one showing its description. */
+    /* Grid rather than flex: main.js moves the photo into the open step, and it
+       has to span the whole width on its own row under the header. Every cell is
+       placed explicitly because ::after generates after that moved child. */
+    .process-step {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        column-gap: 14px;
+        padding: 18px;
+    }
+
+    .process-step-number {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .process-step-body {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .process-step>.process-figure {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: 16px;
+    }
+
+    .process-step::after {
+        content: '\f078';
+        grid-column: 3;
+        grid-row: 1;
+        align-self: center;
+        font-family: 'Font Awesome 7 Pro';
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--color-dark);
+        transition: transform var(--transition-base) var(--easing);
+    }
+
+    .process-step.is-active::after {
+        transform: rotate(180deg);
+    }
+
+    .process-step:not(.is-active) .process-step-description {
+        display: none;
+    }
+
+    .process-step:not(.is-active) .process-step-title {
+        margin-bottom: 0;
+    }
+
+    .process-step-number {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+    }
+
+    .process-figure-overlay {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .standards-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .standards-content {
+        grid-column: span 1;
+    }
+
+    .standards-figure img {
+        height: 280px;
+    }
+
+    .testimonials-slider-wrap {
+        padding: 0;
+    }
+
+    /* One card per view: keep only enough room for the avatar itself. */
+    .testimonial-title {
+        padding-right: 92px;
+    }
+
+    .testimonials-arrow-prev,
+    .testimonials-arrow-next {
+        display: none;
+    }
+
+    .article-card-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .article-card-row .article-thumbnail img,
+    .article-card-featured .article-thumbnail img {
+        height: 210px;
+    }
+
+    .team-collage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+    }
+
+    .contact-panel {
+        padding: 36px 20px;
+    }
+
+    .footer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column-contact {
+        grid-column: span 1;
+    }
+
+    .site-copyright {
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 575px) {
+    .site-logo img {
+        width: 58px;
+    }
+
+    .header-cta {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .section-quote {
+        padding-left: 32px;
+    }
+
+    .filter-button {
+        padding: 11px 18px;
+        font-size: 15px;
+    }
+
+    .story-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .story-figure img {
+        height: 220px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field {
+        width: 100%;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+    }
+}
