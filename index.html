@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                     <li class="main-nav-item has-submenu">
-                        <a class="main-nav-link" href="#">Cải tạo nhà <i class="fa-solid fa-chevron-down"></i></a>
+                        <a class="main-nav-link" href="HTH-caiTaoNha.html">Cải tạo nhà <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="submenu">
                             <li><a href="#">Cải tạo nhà phố</a></li>
                             <li><a href="#">Cải tạo chung cư</a></li>
@@ -1086,7 +1086,7 @@
         <div class="container-custom">
             <ul class="hotline-list" data-aos="fade-up">
                 <li class="hotline-card">
-                    <span class="hotline-icon"><i class="fa-duotone fa-solid fa-user-headset"></i></span>
+                    <span class="hotline-icon"><i class="fa-light fa-user-headset"></i></span>
                     <span class="hotline-body">
                         <span class="hotline-label">Hotline tư vấn 24/7</span>
                         <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
@@ -1179,6 +1179,95 @@
 
         <p class="site-copyright">Copyright © 2016 Công ty tnhh hth home. All rights reserved.</p>
     </footer>
+
+    <nav class="contact-dock" aria-label="Liên hệ nhanh">
+        <ul class="contact-dock-list">
+            <li>
+                <a class="contact-dock-link contact-dock-facebook" href="#" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Facebook HTH HOME</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="tel:09747455">
+                    <img src="assets/icons/hotline.png" alt="">
+                    <span class="contact-dock-label">Hotline: 097474.55.xxx</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo tư vấn thiết kế</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo báo giá thi công</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link contact-dock-email" href="mailto:info@hthhome.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Email: info@hthhome.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle"
+        hidden>
+        <div class="promo-popup-backdrop" data-popup-close></div>
+        <div class="promo-popup-dialog" tabindex="-1">
+            <button class="promo-popup-close" type="button" aria-label="Đóng" data-popup-close><i
+                    class="fa-solid fa-xmark"></i></button>
+
+            <h2 class="promo-popup-title" id="promoPopupTitle">Khuyến mãi thiết kế nhà năm 2026</h2>
+            <p class="promo-popup-text">Áp dụng cho 10 khách hàng đầu tiên, bạn hãy nhanh tay điền thông tin để được
+                giá tốt khi xây nhà.</p>
+
+            <figure class="promo-popup-banner">
+                <img src="assets/images/article-featured.jpg" alt="Mô hình nhà đang thi công trên bản vẽ thiết kế">
+            </figure>
+
+            <a class="promo-popup-link" href="#">Xem hồ sơ năng lực <i class="fa-solid fa-chevron-right"></i></a>
+
+            <div class="countdown" data-countdown>
+                <div class="countdown-item"><span class="countdown-value" data-countdown-unit="days">0</span><span
+                        class="countdown-label">Ngày</span></div>
+                <div class="countdown-item"><span class="countdown-value" data-countdown-unit="hours">0</span><span
+                        class="countdown-label">Giờ</span></div>
+                <div class="countdown-item"><span class="countdown-value" data-countdown-unit="minutes">0</span><span
+                        class="countdown-label">Phút</span></div>
+                <div class="countdown-item"><span class="countdown-value" data-countdown-unit="seconds">0</span><span
+                        class="countdown-label">Giây</span></div>
+            </div>
+
+            <form class="promo-popup-form">
+                <label class="visually-hidden" for="popupName">Họ và tên</label>
+                <input class="form-control" id="popupName" name="name" type="text" placeholder="Họ và tên" required>
+
+                <label class="visually-hidden" for="popupPhone">Số điện thoại</label>
+                <input class="form-control" id="popupPhone" name="phone" type="tel" placeholder="Số điện thoại"
+                    required>
+
+                <label class="visually-hidden" for="popupAddress">Địa chỉ xây dựng</label>
+                <input class="form-control" id="popupAddress" name="address" type="text"
+                    placeholder="Địa chỉ xây dựng?">
+
+                <label class="visually-hidden" for="popupType">Chọn loại nhà để nhận báo giá</label>
+                <select class="form-control" id="popupType" name="type">
+                    <option value="">Chọn loại nhà để nhận báo giá</option>
+                    <option value="nha-pho">Nhà phố</option>
+                    <option value="biet-thu">Biệt thự</option>
+                    <option value="nha-cap-4">Nhà cấp 4</option>
+                    <option value="cai-tao">Cải tạo</option>
+                </select>
+
+                <button class="button button-accent promo-popup-submit" type="submit">Nhận báo giá xây nhà</button>
+            </form>
+        </div>
+    </div>
 
     <button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang"><i
             class="fa-solid fa-chevron-up"></i></button>

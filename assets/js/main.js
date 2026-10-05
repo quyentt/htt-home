@@ -80,6 +80,74 @@
                 }
             });
         }
+
+        if (document.getElementById('reviewsSlider')) {
+            new Swiper('#reviewsSlider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                speed: 600,
+                autoHeight: true,
+                navigation: {
+                    prevEl: '.reviews-arrow-prev',
+                    nextEl: '.reviews-arrow-next'
+                },
+                pagination: {
+                    el: '.reviews-pagination',
+                    clickable: true
+                }
+            });
+        }
+    }
+
+    /* A tab row with data-caption-target rewrites the caption of the figure it
+       points at; initFilters already moves the active state between tabs. */
+    function initCaptionTabs() {
+        document.querySelectorAll('[data-caption-target]').forEach(function (list) {
+            var figure = document.getElementById(list.getAttribute('data-caption-target'));
+
+            if (!figure) {
+                return;
+            }
+
+            var title = figure.querySelector('.caption-figure-title');
+            var text = figure.querySelector('.caption-figure-text');
+
+            list.addEventListener('click', function (event) {
+                var button = event.target.closest('[data-caption-title]');
+
+                if (!button || !list.contains(button)) {
+                    return;
+                }
+
+                if (title) {
+                    title.textContent = button.getAttribute('data-caption-title');
+                }
+
+                if (text) {
+                    text.textContent = button.getAttribute('data-caption-text') || '';
+                }
+            });
+        });
+    }
+
+    /* <details name> already keeps one answer open in current browsers; this
+       covers the ones that ignore the attribute. */
+    function initFaq() {
+        var items = document.querySelectorAll('.faq-item');
+
+        items.forEach(function (item) {
+            item.addEventListener('toggle', function () {
+                if (!item.open) {
+                    return;
+                }
+
+                items.forEach(function (other) {
+                    if (other !== item && other.open) {
+                        other.open = false;
+                    }
+                });
+            });
+        });
     }
 
     /* A 1px sentinel at the very top of the document lets the sticky header and the
@@ -563,12 +631,157 @@
         });
     }
 
+    function initCountdown(container) {
+        var units = {};
+
+        container.querySelectorAll('[data-countdown-unit]').forEach(function (element) {
+            units[element.getAttribute('data-countdown-unit')] = element;
+        });
+
+        function getDeadline() {
+            var now = new Date();
+
+            return new Date(now.getFullYear(), now.getMonth() + 1, 1).getTime() - 1000;
+        }
+
+        var deadline = getDeadline();
+        var timerId = null;
+
+        function render() {
+            var remaining = deadline - Date.now();
+
+            // Rolls over to the end of next month so the offer never reads 0:0:0:0.
+            if (remaining <= 0) {
+                deadline = getDeadline();
+                remaining = deadline - Date.now();
+            }
+
+            var totalSeconds = Math.floor(remaining / 1000);
+            var values = {
+                days: Math.floor(totalSeconds / 86400),
+                hours: Math.floor(totalSeconds / 3600) % 24,
+                minutes: Math.floor(totalSeconds / 60) % 60,
+                seconds: totalSeconds % 60
+            };
+
+            Object.keys(units).forEach(function (key) {
+                units[key].textContent = values[key];
+            });
+        }
+
+        return {
+            start: function () {
+                render();
+                timerId = timerId || window.setInterval(render, 1000);
+            },
+            stop: function () {
+                window.clearInterval(timerId);
+                timerId = null;
+            }
+        };
+    }
+
+    function initPromoPopup() {
+        var popup = document.getElementById('promoPopup');
+
+        if (!popup) {
+            return;
+        }
+
+        var dialog = popup.querySelector('.promo-popup-dialog');
+        var form = popup.querySelector('.promo-popup-form');
+        var countdownElement = popup.querySelector('[data-countdown]');
+        var countdown = countdownElement ? initCountdown(countdownElement) : null;
+        var lastFocused = null;
+
+        function getFocusable() {
+            return Array.prototype.filter.call(
+                dialog.querySelectorAll('a[href], button, input, select, textarea'),
+                function (element) {
+                    return !element.disabled && element.offsetParent !== null;
+                }
+            );
+        }
+
+        function onKeydown(event) {
+            if (event.key === 'Escape') {
+                close();
+                return;
+            }
+
+            if (event.key !== 'Tab') {
+                return;
+            }
+
+            var focusable = getFocusable();
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+
+            if (event.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        }
+
+        function open() {
+            lastFocused = document.activeElement;
+            popup.hidden = false;
+            document.body.classList.add('is-popup-open');
+            document.addEventListener('keydown', onKeydown);
+
+            if (countdown) {
+                countdown.start();
+            }
+
+            // Forces a reflow so the opening transition runs after display: none is lifted.
+            void popup.offsetWidth;
+            popup.classList.add('is-open');
+            dialog.focus({ preventScroll: true });
+        }
+
+        function close() {
+            popup.classList.remove('is-open');
+            document.body.classList.remove('is-popup-open');
+            document.removeEventListener('keydown', onKeydown);
+
+            if (countdown) {
+                countdown.stop();
+            }
+
+            window.setTimeout(function () {
+                popup.hidden = true;
+            }, prefersReducedMotion ? 0 : 300);
+
+            if (lastFocused && typeof lastFocused.focus === 'function') {
+                lastFocused.focus({ preventScroll: true });
+            }
+        }
+
+        popup.querySelectorAll('[data-popup-close]').forEach(function (element) {
+            element.addEventListener('click', close);
+        });
+
+        if (form) {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                close();
+            });
+        }
+
+        open();
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         initScrollReveal();
         initSliders();
         initScrollState();
         initCounters();
         initFilters();
+        initCaptionTabs();
+        initFaq();
         initProcessSteps();
         initProcessScrollbar();
         initStandardsDots();
@@ -576,5 +789,6 @@
         initHeaderSearch();
         initImageFadeIn();
         initForms();
+        initPromoPopup();
     });
 })();

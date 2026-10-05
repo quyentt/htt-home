@@ -682,4 +682,387 @@
         width: 42px;
         height: 42px;
     }
+
+    .promo-popup {
+        padding: 16px;
+    }
+
+    .promo-popup-dialog {
+        max-height: calc(100vh - 32px);
+        max-height: calc(100dvh - 32px);
+        padding: 24px 14px 16px;
+    }
+
+    .promo-popup-title {
+        font-size: 18px;
+    }
+
+    .promo-popup-text {
+        font-size: 14px;
+    }
+
+    .promo-popup-banner {
+        margin-top: 16px;
+    }
+
+    .promo-popup-banner img {
+        max-height: max(160px, calc(100vh - 560px));
+    }
+
+    .promo-popup-link {
+        font-size: 14px;
+    }
+
+    .countdown {
+        gap: 4px;
+    }
+
+    .countdown-item {
+        height: 60px;
+        gap: 4px;
+    }
+
+    .countdown-value {
+        font-size: 26px;
+    }
+
+    .countdown-label {
+        font-size: 10px;
+    }
+
+    .promo-popup-form {
+        gap: 10px;
+    }
+
+    .promo-popup-form .form-control {
+        height: 42px;
+    }
+
+    .promo-popup-submit {
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .contact-dock {
+        left: 12px;
+        bottom: 16px;
+    }
+
+    .contact-dock-list {
+        gap: 8px;
+    }
+
+    .contact-dock-link {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (hover: none) {
+    .contact-dock-label {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------- service pages (renovation) */
+
+@media (max-width: 1439px) {
+
+    /* No room outside the container for the review arrows. */
+    .reviews-slider-wrap {
+        padding: 0 60px;
+    }
+
+    .reviews-arrow-prev {
+        left: 0;
+    }
+
+    .reviews-arrow-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    /* Below this width the before/after card in the photo slides under the
+       text, so a veil keeps the copy readable. */
+    .renovation-hero-section {
+        background-image: linear-gradient(90deg, rgba(13, 59, 47, 0.92), rgba(13, 59, 47, 0.55)),
+            url('../backgrounds/renovation-hero-background.jpg');
+        background-position: center, 70% center;
+    }
+
+    .needs-layout,
+    .project-showcase,
+    .consult-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .needs-figure {
+        height: auto;
+        aspect-ratio: 628 / 416;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reviews-page {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .review-card-featured {
+        grid-column: 1 / -1;
+    }
+
+    .reviews-arrow-prev,
+    .reviews-arrow-next {
+        top: 50%;
+    }
+
+    .price-col-service {
+        width: 280px;
+    }
+
+    .price-col-scope {
+        width: 330px;
+    }
+
+    .price-col-price {
+        width: 180px;
+    }
+
+    .consult-figure {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 991px) {
+    .service-hero-inner {
+        min-height: 0;
+        padding: 72px 0 56px;
+    }
+
+    .service-hero-title {
+        font-size: 34px;
+    }
+
+    .service-hero-subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .service-hero-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .hero-feature-list {
+        grid-template-columns: repeat(2, max-content);
+        gap: 16px 40px;
+    }
+
+    .service-hero-actions {
+        margin-top: 32px;
+    }
+
+    .renovation-needs-section,
+    .renovation-categories-section,
+    .renovation-risk-section,
+    .renovation-pricing-section,
+    .renovation-process-section,
+    .renovation-projects-section,
+    .reviews-section,
+    .faq-section,
+    .consult-section {
+        padding: 52px 0;
+    }
+
+    .media-card-title {
+        font-size: 20px;
+    }
+
+    .price-footer {
+        flex-direction: column;
+    }
+
+    .button-tile {
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        min-height: 70px;
+    }
+
+    .button-tile br {
+        display: none;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-hero-title {
+        font-size: 30px;
+    }
+
+    .renovation-hero-section {
+        background-position: center, 100% center;
+    }
+
+    .service-hero-subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .service-hero-actions .button {
+        width: 100%;
+    }
+
+    .hero-feature-list {
+        gap: 16px 24px;
+    }
+
+    .eyebrow-center::before,
+    .eyebrow-center::after {
+        width: 40px;
+    }
+
+    .caption-figure-body,
+    .caption-figure-brand .caption-figure-body {
+        padding: 16px 20px;
+    }
+
+    .caption-figure-title,
+    .caption-figure-brand .caption-figure-title {
+        font-size: 20px;
+    }
+
+    .caption-figure-text,
+    .caption-figure-brand .caption-figure-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .price-note {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 0;
+    }
+
+    .price-note-label {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .price-note-list {
+        margin: 0 16px;
+        padding: 10px 0 0;
+        border-top: 1px solid var(--color-line);
+        border-left: 0;
+    }
+
+    .step-number {
+        font-size: 34px;
+    }
+
+    .step-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .before-after {
+        height: 240px;
+    }
+
+    .meta-list-inline {
+        flex-wrap: wrap;
+        gap: 8px 24px;
+    }
+
+    .meta-list-inline li:last-child {
+        flex-basis: 100%;
+    }
+
+    .review-card-featured {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reviews-slider-wrap {
+        padding: 0;
+    }
+
+    .reviews-arrow-prev,
+    .reviews-arrow-next {
+        display: none;
+    }
+
+    .consult-card {
+        padding: 24px 18px;
+    }
+
+    .consult-title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .consult-form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .consult-figure {
+        min-height: 360px;
+    }
+
+    .consult-submit {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 575px) {
+    .breadcrumb-list {
+        font-size: 13px;
+    }
+
+    .hero-feature-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-grid,
+    .reviews-page,
+    .project-item {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .step-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 20px;
+    }
+
+    .project-item {
+        gap: 14px;
+    }
+
+    .before-after-small {
+        height: 180px;
+    }
+
+    .project-showcase .meta-list li:last-child {
+        max-width: none;
+    }
+
+    .faq-question {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 14px 14px 16px;
+        font-size: 15px;
+        line-height: 24px;
+    }
 }
