@@ -1066,3 +1066,151 @@
         line-height: 24px;
     }
 }
+
+@media (max-width: 1439px) {
+    .partners-slider-wrap {
+        padding: 0 60px;
+    }
+
+    .partners-arrow-prev {
+        left: 0;
+    }
+
+    .partners-arrow-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .partners-slider-wrap {
+        padding: 0;
+    }
+
+    .partners-arrow-prev,
+    .partners-arrow-next {
+        display: none;
+    }
+
+    .partner-logo img {
+        max-width: 130px;
+        max-height: 64px;
+    }
+}
+
+/* ------------------------------------------------- projects page */
+
+@media (max-width: 1199px) {
+    .house-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .house-filter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .house-filter-submit {
+        grid-column: 1 / -1;
+    }
+
+    .article-row,
+    .article-row-reverse {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .projects-hero-section .service-hero-inner {
+        padding: 72px 0 56px;
+    }
+
+    .house-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 24px;
+    }
+
+    .article-row,
+    .article-row-reverse {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-row-reverse .article-figure {
+        order: 0;
+    }
+
+    .article-figure {
+        aspect-ratio: 16 / 10;
+    }
+
+    .gallery-title {
+        line-height: 1.25;
+    }
+
+    .house-list-section,
+    .townhouse-guide-section,
+    .house-gallery-section,
+    .house-gallery-section+.house-gallery-section {
+        padding: 52px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .pill-list {
+        gap: 10px;
+    }
+
+    .pill-button {
+        flex-shrink: 0;
+    }
+
+    .projects-hero-subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .projects-hero-actions .button {
+        width: 100%;
+    }
+
+    .intro-box {
+        padding: 22px 18px;
+    }
+
+    .intro-box-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .article-heading {
+        font-size: 22px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .gallery-item figcaption {
+        margin-top: 14px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .house-filter {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .house-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagination-list {
+        gap: 6px;
+    }
+
+    .pagination-link {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}

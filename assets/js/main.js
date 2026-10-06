@@ -81,6 +81,36 @@
             });
         }
 
+        /* Ten logos moved two at a time give the five dots of the design. */
+        if (document.getElementById('partnersSlider')) {
+            new Swiper('#partnersSlider', {
+                slidesPerView: 6,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+                speed: 600,
+                loop: true,
+                autoplay: prefersReducedMotion ? false : {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    prevEl: '.partners-arrow-prev',
+                    nextEl: '.partners-arrow-next'
+                },
+                pagination: {
+                    el: '.partners-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 2, slidesPerGroup: 2 },
+                    576: { slidesPerView: 3, slidesPerGroup: 2 },
+                    992: { slidesPerView: 4, slidesPerGroup: 2 },
+                    1200: { slidesPerView: 6, slidesPerGroup: 2 }
+                }
+            });
+        }
+
         if (document.getElementById('reviewsSlider')) {
             new Swiper('#reviewsSlider', {
                 slidesPerView: 1,
