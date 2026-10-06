@@ -4598,3 +4598,487 @@ a.pagination-link:hover {
     color: #666666;
     text-align: center;
 }
+
+/* ------------------------------------------------ construction page hero */
+
+.construction-hero-section {
+    background-image: url('../backgrounds/construction-hero-background.jpg');
+}
+
+.construction-hero-section .service-hero-inner {
+    align-items: flex-start;
+    min-height: 678px;
+    padding: 107px 0 40px;
+}
+
+.construction-hero-title {
+    margin: 0;
+    padding-left: 20px;
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 56px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-left: 2px solid var(--color-primary);
+}
+
+.construction-hero-title .highlight {
+    display: block;
+    color: var(--color-primary);
+}
+
+.construction-hero-section .projects-hero-subtitle {
+    margin-top: 2px;
+}
+
+.construction-hero-description {
+    max-width: 510px;
+    margin-top: 10px;
+}
+
+.scope-list {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    margin-top: 29px;
+}
+
+.scope-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.scope-item strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.scope-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    transition: background-color var(--transition-base) var(--easing);
+}
+
+.scope-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.scope-item:hover .scope-icon {
+    background-color: var(--color-primary);
+}
+
+.construction-hero-section .projects-hero-actions {
+    display: inline-grid;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+/* ------------------------------------------------------- service tabs */
+
+.service-tabs-section {
+    background-color: var(--color-dark);
+}
+
+.service-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.service-tab {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-base) var(--easing),
+        background-color var(--transition-base) var(--easing);
+}
+
+.service-tab:hover,
+.service-tab.is-active {
+    color: var(--color-primary);
+    background-color: #ffffff;
+}
+
+/* ----------------------------------------------------- categories */
+
+.construction-categories-section {
+    padding: 66px 0 60px;
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 31px;
+    margin-top: 30px;
+}
+
+.media-card-lg {
+    padding: 6px 6px 26px;
+}
+
+.media-card-lg .media-card-image {
+    height: 260px;
+    border-radius: var(--radius-md);
+}
+
+.media-card-lg .media-card-title {
+    margin: 20px 0 6px;
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+.media-card-lead {
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.media-card-lg .media-card-text {
+    padding: 0 22px;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: justify;
+    color: #888888;
+}
+
+.media-card-lg:hover .media-card-text {
+    color: var(--color-text);
+}
+
+.section-quote strong {
+    font-weight: 700;
+}
+
+/* ----------------------------------------------------- process cards */
+
+.construction-process-section {
+    padding: 62px 0 61px;
+}
+
+.step-card-grid {
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.step-card {
+    padding: 22px 24px 28px;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--radius-sm);
+    transition: border-color var(--transition-base) var(--easing),
+        transform var(--transition-base) var(--easing),
+        box-shadow var(--transition-base) var(--easing);
+}
+
+.step-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.step-card-number {
+    display: block;
+    font-family: var(--font-number);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-primary);
+}
+
+.step-card-title {
+    margin: 16px 0 10px;
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    color: var(--color-text);
+    transition: color var(--transition-base) var(--easing);
+}
+
+.step-card:hover .step-card-title {
+    color: var(--color-primary);
+}
+
+.step-card-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #888888;
+}
+
+/* ---------------------------------------------------- quality control */
+
+/* The photo collage on the right is part of the background image itself. */
+.quality-section {
+    padding: 70px 0 72px;
+    background-color: #f3f7f6;
+    background-image: url('../backgrounds/quality-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quality-content {
+    max-width: 517px;
+}
+
+.quality-content .section-title .highlight {
+    display: block;
+}
+
+.quality-description {
+    margin: 4px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dark);
+}
+
+.quality-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 26px;
+}
+
+.quality-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 14px 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e8eeec;
+    border-radius: var(--radius-sm);
+    transition: border-color var(--transition-base) var(--easing),
+        transform var(--transition-base) var(--easing);
+}
+
+.quality-item:hover {
+    border-color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+.quality-number {
+    flex-shrink: 0;
+    width: 46px;
+    font-family: var(--font-number);
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-dark);
+}
+
+.quality-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    color: var(--color-primary);
+    background-color: #e8eeec;
+    border-radius: 50%;
+}
+
+.quality-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.quality-title {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+
+.quality-text {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    color: #888888;
+}
+
+.quality-arrow {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    color: var(--color-primary);
+    background-color: #c7e8c3;
+    border-radius: 50%;
+    transition: transform var(--transition-base) var(--easing),
+        color var(--transition-base) var(--easing),
+        background-color var(--transition-base) var(--easing);
+}
+
+.quality-icon img {
+    width: 37px;
+    height: 37px;
+    object-fit: contain;
+}
+
+.quality-item:hover .quality-arrow {
+    color: #ffffff;
+    background-color: var(--color-primary);
+    transform: translateX(3px);
+}
+
+/* ------------------------------------------------------ engineer team */
+
+.engineer-team-section {
+    padding: 98px 0 92px;
+    background-color: var(--color-dark);
+    background-image: url('../backgrounds/team-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eyebrow-on-dark {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: none;
+}
+
+.eyebrow-on-dark::before,
+.eyebrow-on-dark::after {
+    width: 60px;
+    background-color: #ffffff;
+}
+
+.engineer-team-section .section-title {
+    margin-top: 2px;
+}
+
+.engineer-team-section .section-quote {
+    margin-top: 2px;
+}
+
+.engineer-grid {
+    gap: 30px;
+    margin-top: 32px;
+}
+
+.engineer-card {
+    overflow: hidden;
+    background-color: #1a5544;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-base) var(--easing),
+        box-shadow var(--transition-base) var(--easing);
+}
+
+.engineer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.engineer-photo {
+    height: 210px;
+    overflow: hidden;
+}
+
+.engineer-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow) var(--easing);
+}
+
+.engineer-card:hover .engineer-photo img {
+    transform: scale(1.06);
+}
+
+.engineer-body {
+    padding: 20px 23px 30px;
+}
+
+.engineer-name {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #ffffff;
+}
+
+.engineer-role {
+    position: relative;
+    margin: 2px 0 0;
+    padding-bottom: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.engineer-role::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+.engineer-text {
+    margin: 18px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------- projects listing */
+
+.construction-projects-section {
+    padding: 82px 0 60px;
+}
+
+.construction-projects-section .house-grid {
+    margin-top: 40px;
+}
+
+.construction-projects-section .section-action-center {
+    margin-top: 40px;
+}
+
+.section-quote-compact {
+    max-width: 640px;
+}

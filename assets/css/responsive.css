@@ -1214,3 +1214,163 @@
         font-size: 16px;
     }
 }
+
+/* --------------------------------------------- construction page */
+
+@media (max-width: 1199px) {
+    .card-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* The collage in the background would sit under the list, so the
+       section drops to a plain tint and the list takes the full width. */
+    .quality-section {
+        padding: 60px 0;
+        background-image: none;
+    }
+
+    .quality-content {
+        max-width: none;
+    }
+
+    .engineer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991px) {
+    .construction-hero-section {
+        background-image: linear-gradient(90deg, rgba(13, 59, 47, 0.92), rgba(13, 59, 47, 0.55)),
+            url('../backgrounds/construction-hero-background.jpg');
+        background-position: center, 70% center;
+    }
+
+    .construction-hero-section .service-hero-inner {
+        min-height: 0;
+        padding: 72px 0 56px;
+    }
+
+    .construction-hero-title {
+        font-size: 34px;
+        line-height: 46px;
+    }
+
+    .scope-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .service-tab {
+        font-size: 16px;
+    }
+
+    .construction-categories-section,
+    .construction-process-section,
+    .construction-projects-section,
+    .engineer-team-section {
+        padding: 52px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .construction-hero-section .projects-hero-actions {
+        display: grid;
+    }
+
+    .construction-hero-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .scope-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .service-tabs {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 16px 0;
+    }
+
+    .service-tab {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: 48px;
+        padding: 6px 8px;
+        font-size: 13px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .service-tab span {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .card-grid-3,
+    .engineer-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .media-card-lg .media-card-image {
+        height: 220px;
+    }
+
+    .step-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .step-card {
+        padding: 18px;
+    }
+
+    .step-card-number {
+        font-size: 38px;
+    }
+
+    .step-card-title {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .quality-item {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .quality-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .step-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .quality-number {
+        width: auto;
+        font-size: 28px;
+    }
+
+    .quality-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .quality-body {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .button-lg {
+        padding: 0 14px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+}
