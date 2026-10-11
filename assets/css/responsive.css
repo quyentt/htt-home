@@ -1374,3 +1374,653 @@
         white-space: nowrap;
     }
 }
+
+/* ------------------------------------------------ turnkey page */
+
+@media (max-width: 1199px) {
+    .turnkey-intro-section .story-title .script-title {
+        font-size: 64px;
+    }
+
+    .concern-card[data-distance="2"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .solution-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .solution-video {
+        height: 320px;
+    }
+
+    .process-layout-scope .process-list,
+    .process-layout-commitment .process-list {
+        height: auto;
+    }
+
+    .process-layout-scope .process-step,
+    .process-layout-commitment .process-step {
+        height: auto;
+        gap: 0;
+        column-gap: 14px;
+        padding: 18px;
+    }
+
+    .turnkey-step-grid {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .turnkey-hero-section .service-hero-inner {
+        min-height: 440px;
+    }
+
+    .concern-card[data-distance="1"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .package-card {
+        height: 400px;
+    }
+
+    .package-card-title {
+        margin: 0 18px 18px;
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .note-panel-text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .turnkey-step-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .expand-grid {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .expand-panel {
+        flex: none;
+        min-height: 340px;
+    }
+
+    .expand-panel-text {
+        max-height: 140px;
+        margin-top: 10px;
+        opacity: 1;
+    }
+
+    .expand-panel::after {
+        opacity: 1;
+    }
+
+    .price-card-grid {
+        grid-template-columns: minmax(0, 560px);
+        justify-content: center;
+    }
+
+    .turnkey-process-section {
+        padding: 56px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .turnkey-hero-section .service-hero-inner {
+        min-height: 320px;
+    }
+
+    .turnkey-hero-action {
+        bottom: 20px;
+    }
+
+    .turnkey-intro-section .story-title .script-title {
+        font-size: 52px;
+    }
+
+    .turnkey-intro-section .story-title .display-title {
+        font-size: 22px;
+    }
+
+    .story-actions {
+        flex-wrap: wrap;
+    }
+
+    .concerns-section {
+        padding: 56px 0 48px;
+    }
+
+    .concerns-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .concern-card[data-distance="0"] {
+        --offset: 0px;
+    }
+
+    .concern-card[data-distance="0"][data-side="-1"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .solution-subtitle {
+        font-size: 20px;
+    }
+
+    .solution-video {
+        height: 220px;
+    }
+
+    .package-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .package-card {
+        height: 340px;
+    }
+
+    .note-panel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .process-layout-scope .process-figure-overlay,
+    .process-layout-commitment .process-figure-overlay {
+        padding: 20px;
+    }
+
+    .process-figure-number {
+        font-size: 44px;
+    }
+
+    .process-layout-commitment .process-step-number {
+        font-size: 22px;
+    }
+
+    .turnkey-step-number {
+        font-size: 32px;
+    }
+
+    .turnkey-step-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .turnkey-process-section .section-action-center .button {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .expand-panel {
+        min-height: 300px;
+    }
+
+    .expand-panel-title {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    .price-card-title,
+    .price-card-featured .price-card-title {
+        font-size: 22px;
+    }
+
+    .price-card-rate dd,
+    .price-card-rate+.price-card-rate dd {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 575px) {
+    .turnkey-intro-section .story-title .script-title {
+        font-size: 44px;
+    }
+
+    .turnkey-step-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .turnkey-hero-action {
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .price-card {
+        padding: 24px 20px;
+    }
+}
+
+/* ------------------------------------------------ about page */
+
+@media (max-width: 1199px) {
+    .about-hero-title .script-title {
+        font-size: 96px;
+    }
+
+    .about-hero-title-accent {
+        margin-left: 64px;
+    }
+
+    .about-story-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-story-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-values-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .about-value {
+        padding: 0 20px;
+    }
+
+    .about-value+.about-value {
+        padding-top: 40px;
+        border-top: 1px solid #e1e6e4;
+        background: none;
+    }
+
+    .principle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .principle-card-offset {
+        grid-column: auto;
+    }
+
+    .team-collage {
+        grid-template-rows: repeat(3, 220px);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-hero-section {
+        background-image: linear-gradient(rgba(13, 59, 47, 0.62), rgba(13, 59, 47, 0.62)),
+            url('../backgrounds/about-hero-background.jpg');
+    }
+
+    .about-hero-section .service-hero-inner {
+        min-height: 520px;
+    }
+
+    .about-hero-content {
+        padding-top: 70px;
+    }
+
+    .about-hero-title .script-title {
+        font-size: 72px;
+    }
+
+    .about-hero-title-accent {
+        margin-left: 40px;
+    }
+
+    .about-hero-lead {
+        font-size: 24px;
+    }
+
+    .about-philosophy-section {
+        padding: 70px 0;
+    }
+
+    .about-story-signature .script-title {
+        font-size: 80px;
+    }
+
+    .about-team-title .script-title {
+        font-size: 84px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-hero-section .service-hero-inner {
+        min-height: 440px;
+    }
+
+    .about-hero-title .script-title {
+        font-size: 52px;
+    }
+
+    .about-hero-title-accent {
+        margin-left: 24px;
+    }
+
+    .about-hero-lead {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .about-hero-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .about-story-gallery {
+        grid-template-rows: 200px 200px;
+    }
+
+    .about-story-heading {
+        font-size: 20px;
+    }
+
+    .about-story-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .about-story-signature .script-title {
+        font-size: 58px;
+    }
+
+    .about-story-signature .display-title {
+        font-size: 22px;
+    }
+
+    .about-video {
+        margin-top: 30px;
+    }
+
+    .about-philosophy-bar {
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .about-philosophy-quote {
+        padding-left: 36px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .about-value-title {
+        font-size: 28px;
+    }
+
+    .principle-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .principle-card {
+        min-height: 0;
+    }
+
+    .about-team-title .script-title {
+        font-size: 64px;
+    }
+
+    .team-collage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        grid-auto-rows: 180px;
+        gap: 14px;
+    }
+
+    .team-collage-a,
+    .team-collage-b,
+    .team-collage-c,
+    .team-collage-d,
+    .team-collage-e,
+    .team-collage-f {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .team-collage-b,
+    .team-collage-e {
+        grid-row: span 2;
+    }
+
+    .team-collage-f {
+        grid-column: 1 / -1;
+    }
+
+    .about-certification-section {
+        padding: 56px 0;
+    }
+
+    .about-projects-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-hero-title .script-title {
+        font-size: 42px;
+    }
+
+    .about-story-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-auto-rows: 220px;
+    }
+
+    .about-story-gallery .story-figure-tall {
+        grid-row: auto;
+    }
+}
+
+/* ------------------------------------------------ feng shui page */
+
+@media (max-width: 1199px) {
+    .benefit-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 24px 0;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bagua-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .bagua-figure {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .feng-shui-hero-section .service-hero-inner {
+        min-height: 440px;
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .feng-shui-hero-section {
+        background-position: 70% center;
+    }
+
+    .feng-shui-hero-section .service-hero-inner {
+        min-height: 380px;
+        padding-top: 90px;
+    }
+
+    .feng-shui-hero-title {
+        font-size: 30px;
+    }
+
+    .feng-shui-hero-description {
+        font-size: 16px;
+    }
+
+    .benefit-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .post-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .post-card-image {
+        height: 200px;
+    }
+
+    .feng-shui-knowledge-subtitle {
+        font-size: 20px;
+    }
+
+    .bagua-content p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+/* ------------------------------------------------ company profile */
+
+@media (max-width: 1439px) {
+    .profile-book {
+        height: 760px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .profile-book {
+        height: 620px;
+    }
+
+    .profile-hero-inner {
+        min-height: 600px;
+    }
+
+    .profile-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .profile-sidebar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .sidebar-banner {
+        grid-column: 1 / -1;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-hero-inner {
+        min-height: 420px;
+    }
+
+    .profile-hero-title {
+        font-size: 30px;
+    }
+
+    .profile-heading {
+        font-size: 28px;
+    }
+
+    .profile-meta {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .profile-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .profile-viewer-stage {
+        padding: 24px 12px 12px;
+    }
+
+    .profile-book {
+        height: 440px;
+    }
+
+    .viewer-arrow {
+        display: none;
+    }
+
+    .profile-toolbar {
+        gap: 12px;
+        padding: 8px 12px 14px;
+    }
+}
+
+/* ------------------------------------------------ team page */
+
+@media (max-width: 767px) {
+    .customer-focus-section .section-title,
+    .team-values-section .section-title,
+    .team-culture-section .section-title {
+        font-size: 26px;
+    }
+
+    .customer-mosaic {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 130px;
+        gap: 10px;
+        aspect-ratio: auto;
+    }
+
+    .customer-tile {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .zoom-badge {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------ articles */
+
+@media (max-width: 767px) {
+    .articles-hero-inner {
+        min-height: 300px;
+    }
+
+    .articles-hero-title {
+        font-size: 30px;
+    }
+
+    .article-tabs {
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    .article-tab {
+        height: 36px;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+}

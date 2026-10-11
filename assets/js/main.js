@@ -43,6 +43,26 @@
             });
         }
 
+        if (document.getElementById('aboutCertificationSlider')) {
+            new Swiper('#aboutCertificationSlider', {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 30,
+                speed: 600,
+                grabCursor: true,
+                pagination: {
+                    el: '.about-certification-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1, slidesPerGroup: 1 },
+                    576: { slidesPerView: 2, slidesPerGroup: 2 },
+                    992: { slidesPerView: 3, slidesPerGroup: 3 },
+                    1200: { slidesPerView: 4, slidesPerGroup: 4 }
+                }
+            });
+        }
+
         if (document.getElementById('certificationSlider')) {
             new Swiper('#certificationSlider', {
                 slidesPerView: 3,
@@ -308,8 +328,12 @@
        beside it. A step without its own copy or photo falls back to its
        description and leaves the current photo in place. */
     function initProcessSteps() {
-        var list = document.querySelector('.process-list');
-        var figure = document.querySelector('.process-figure');
+        document.querySelectorAll('.process-layout').forEach(setupProcessSteps);
+    }
+
+    function setupProcessSteps(layout) {
+        var list = layout.querySelector('.process-list');
+        var figure = layout.querySelector('.process-figure');
 
         if (!list || !figure) {
             return;
@@ -358,6 +382,19 @@
                 image.src = src;
             }
 
+            var figureTitle = figure.querySelector('.process-figure-title');
+            var figureNumber = figure.querySelector('.process-figure-number');
+            var stepTitle = step.querySelector('.process-step-title');
+            var stepNumber = step.querySelector('.process-step-number');
+
+            if (figureTitle && stepTitle) {
+                figureTitle.textContent = stepTitle.textContent.trim();
+            }
+
+            if (figureNumber && stepNumber) {
+                figureNumber.textContent = stepNumber.textContent.trim();
+            }
+
             if (!text) {
                 return;
             }
@@ -404,8 +441,12 @@
     /* Draws the step list's scrollbar over the list instead of letting the
        native one take layout width. Also supports dragging the thumb. */
     function initProcessScrollbar() {
-        var list = document.querySelector('.process-list');
-        var bar = document.querySelector('.process-scrollbar');
+        document.querySelectorAll('.process-layout').forEach(setupProcessScrollbar);
+    }
+
+    function setupProcessScrollbar(layout) {
+        var list = layout.querySelector('.process-list');
+        var bar = layout.querySelector('.process-scrollbar');
 
         if (!list || !bar) {
             return;
@@ -537,6 +578,348 @@
                 activate(dot);
             }
         });
+    }
+
+    /* The cards sit on a ring: each step rotates which pair is in the middle,
+       and a card's distance and side from that pair drive its CSS position. A
+       card that wraps from one edge to the other jumps without a transition so
+       it does not slide across the others. */
+    function initConcernsSlider() {
+        var slider = document.getElementById('concernsSlider');
+
+        if (!slider) {
+            return;
+        }
+
+        var cards = Array.prototype.slice.call(slider.querySelectorAll('.concern-card'));
+        var dots = Array.prototype.slice.call(slider.querySelectorAll('.concerns-dots .dot'));
+        var count = cards.length;
+        var current = 0;
+
+        function place(step) {
+            var centre = (2 + step) % count;
+
+            cards.forEach(function (card, index) {
+                var offset = ((index - centre + 2) % count + count) % count - 2.5;
+                var side = offset < 0 ? -1 : 1;
+                var wraps = Number(card.getAttribute('data-side')) !== side &&
+                    Math.abs(offset) > 1;
+
+                if (wraps) {
+                    card.style.transition = 'none';
+                }
+
+                card.setAttribute('data-distance', String(Math.floor(Math.abs(offset))));
+                card.setAttribute('data-side', String(side));
+
+                if (wraps) {
+                    void card.offsetWidth;
+                    card.style.transition = '';
+                }
+            });
+
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('is-active', index === step);
+            });
+
+            current = step;
+        }
+
+        dots.forEach(function (dot, index) {
+            dot.addEventListener('click', function () {
+                place(index);
+            });
+        });
+
+        var dragStartX = null;
+        var dragged = false;
+
+        function step(direction) {
+            place((current + direction + dots.length) % dots.length);
+        }
+
+        cards.forEach(function (card) {
+            card.addEventListener('click', function () {
+                if (dragged || Number(card.getAttribute('data-distance')) === 0) {
+                    return;
+                }
+
+                step(Number(card.getAttribute('data-side')));
+            });
+        });
+
+        /* Dragging steps the ring one card in the direction of the drag. Past a
+           small threshold only, so a plain click on a side card still works. */
+        slider.addEventListener('pointerdown', function (event) {
+            if (event.pointerType === 'mouse' && event.button !== 0) {
+                return;
+            }
+
+            dragStartX = event.clientX;
+            dragged = false;
+            slider.classList.add('is-dragging');
+        });
+
+        slider.addEventListener('pointermove', function (event) {
+            if (dragStartX === null || dragged) {
+                return;
+            }
+
+            var delta = event.clientX - dragStartX;
+
+            if (Math.abs(delta) > 50) {
+                dragged = true;
+                step(delta < 0 ? 1 : -1);
+            }
+        });
+
+        function endDrag() {
+            dragStartX = null;
+            slider.classList.remove('is-dragging');
+
+            window.setTimeout(function () {
+                dragged = false;
+            }, 0);
+        }
+
+        slider.addEventListener('pointerup', endDrag);
+        slider.addEventListener('pointercancel', endDrag);
+        slider.addEventListener('pointerleave', endDrag);
+        slider.addEventListener('dragstart', function (event) {
+            event.preventDefault();
+        });
+    }
+
+    /* Hovering or focusing a panel opens it; a tap does the same on touch. */
+    function initAssurancePanels() {
+        document.querySelectorAll('.expand-grid').forEach(function (grid) {
+            var panels = Array.prototype.slice.call(grid.querySelectorAll('.expand-panel'));
+
+            function open(panel) {
+                panels.forEach(function (item) {
+                    item.classList.toggle('is-active', item === panel);
+                });
+            }
+
+            panels.forEach(function (panel) {
+                panel.addEventListener('mouseenter', function () {
+                    open(panel);
+                });
+                panel.addEventListener('focus', function () {
+                    open(panel);
+                });
+                panel.addEventListener('click', function () {
+                    open(panel);
+                });
+            });
+        });
+    }
+
+    /* One shared overlay shows any [data-zoom] element or certificate larger.
+       Items inside the same [data-zoom-group] form a list the overlay can step
+       through; Swiper already swallows the click that ends a drag. */
+    function initImageZoom() {
+        var items = document.querySelectorAll('.certificate-figure, [data-zoom]');
+
+        if (!items.length) {
+            return;
+        }
+
+        var box = document.createElement('div');
+        box.className = 'lightbox';
+        box.setAttribute('role', 'dialog');
+        box.setAttribute('aria-modal', 'true');
+        box.setAttribute('aria-hidden', 'true');
+        box.innerHTML = '<button class="lightbox-close" type="button" aria-label="Đóng"><i class="fa-light fa-xmark"></i></button>' +
+            '<button class="lightbox-nav lightbox-prev" type="button" aria-label="Ảnh trước"><i class="fa-light fa-chevron-left"></i></button>' +
+            '<img class="lightbox-image" alt="">' +
+            '<button class="lightbox-nav lightbox-next" type="button" aria-label="Ảnh sau"><i class="fa-light fa-chevron-right"></i></button>' +
+            '<span class="lightbox-count"></span>';
+        document.body.appendChild(box);
+
+        var image = box.querySelector('.lightbox-image');
+        var close = box.querySelector('.lightbox-close');
+        var prev = box.querySelector('.lightbox-prev');
+        var next = box.querySelector('.lightbox-next');
+        var count = box.querySelector('.lightbox-count');
+        var opener = null;
+        var list = [];
+        var index = 0;
+
+        function render() {
+            var source = list[index].querySelector('img');
+
+            image.src = source.currentSrc || source.src;
+            image.alt = source.alt;
+            prev.hidden = next.hidden = count.hidden = list.length < 2;
+            count.textContent = (index + 1) + ' / ' + list.length;
+        }
+
+        function step(direction) {
+            index = (index + direction + list.length) % list.length;
+            render();
+        }
+
+        function hide() {
+            box.classList.remove('is-open');
+            box.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('lightbox-open');
+
+            if (opener) {
+                opener.focus();
+            }
+        }
+
+        items.forEach(function (item) {
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('role', 'button');
+
+            function show() {
+                var group = item.closest('[data-zoom-group]');
+
+                list = group ? Array.prototype.slice.call(group.querySelectorAll('[data-zoom]')) : [item];
+                index = list.indexOf(item);
+                opener = item;
+                render();
+                box.classList.add('is-open');
+                box.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('lightbox-open');
+                close.focus();
+            }
+
+            item.addEventListener('click', show);
+            item.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    show();
+                }
+            });
+        });
+
+        prev.addEventListener('click', function () {
+            step(-1);
+        });
+
+        next.addEventListener('click', function () {
+            step(1);
+        });
+
+        box.addEventListener('click', function (event) {
+            if (event.target === box || event.target === close || close.contains(event.target)) {
+                hide();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (!box.classList.contains('is-open')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                hide();
+            } else if (event.key === 'ArrowLeft' && list.length > 1) {
+                step(-1);
+            } else if (event.key === 'ArrowRight' && list.length > 1) {
+                step(1);
+            }
+        });
+    }
+
+    /* Pills with data-filter hide the post cards whose data-category differs;
+       an empty value is the 'all' pill. */
+    function initPostFilter() {
+        var list = document.getElementById('postFilter');
+        var grid = document.getElementById('postGrid');
+
+        if (!list || !grid) {
+            return;
+        }
+
+        list.addEventListener('click', function (event) {
+            var button = event.target.closest('[data-filter]');
+
+            if (!button || !list.contains(button)) {
+                return;
+            }
+
+            var value = button.getAttribute('data-filter');
+
+            grid.querySelectorAll('.post-card').forEach(function (card) {
+                card.hidden = value !== '' && card.getAttribute('data-category') !== value;
+            });
+        });
+    }
+
+    /* Turns the stacked page images into a flip book. The images are the
+       company profile PDF rendered page by page, so the book works from a plain
+       file:// open without needing a PDF reader in the page. */
+    function initProfileBook() {
+        var book = document.getElementById('profileBook');
+        var viewer = document.getElementById('profileViewer');
+
+        if (!book || !viewer || typeof St === 'undefined') {
+            return;
+        }
+
+        var sources = Array.prototype.map.call(book.querySelectorAll('.profile-page'), function (page) {
+            return page.getAttribute('data-src');
+        });
+        var counter = document.getElementById('viewerCounter');
+        var range = document.getElementById('viewerRange');
+        var total = sources.length;
+
+        book.innerHTML = '';
+
+        var flip = new St.PageFlip(book, {
+            width: 500,
+            height: 707,
+            size: 'stretch',
+            minWidth: 200,
+            maxWidth: 640,
+            minHeight: 283,
+            maxHeight: 905,
+            showCover: false,
+            drawShadow: true,
+            maxShadowOpacity: 0.5,
+            flippingTime: 700,
+            mobileScrollSupport: true
+        });
+
+        flip.loadFromImages(sources);
+
+        function show(index) {
+            var spread = flip.getOrientation() === 'landscape';
+            var first = spread ? index - (index % 2) + 1 : index + 1;
+
+            counter.textContent = spread && first < total ? first + '-' + (first + 1) + '/' + total : first + '/' + total;
+            range.value = first;
+        }
+
+        flip.on('flip', function (event) {
+            show(event.data);
+        });
+
+        viewer.querySelector('.viewer-arrow-prev').addEventListener('click', function () {
+            flip.flipPrev();
+        });
+
+        viewer.querySelector('.viewer-arrow-next').addEventListener('click', function () {
+            flip.flipNext();
+        });
+
+        range.addEventListener('input', function () {
+            flip.flip(Number(range.value) - 1);
+        });
+
+        document.getElementById('viewerFullscreen').addEventListener('click', function () {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else if (viewer.requestFullscreen) {
+                viewer.requestFullscreen();
+            }
+        });
+
+        show(0);
     }
 
     function initMobileNav() {
@@ -815,6 +1198,11 @@
         initProcessSteps();
         initProcessScrollbar();
         initStandardsDots();
+        initConcernsSlider();
+        initImageZoom();
+        initPostFilter();
+        initProfileBook();
+        initAssurancePanels();
         initMobileNav();
         initHeaderSearch();
         initImageFadeIn();

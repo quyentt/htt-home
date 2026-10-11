@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hồ sơ năng lực - HTH HOME</title>
+    <meta name="description"
+        content="Hồ sơ năng lực HTH HOME: tài liệu giới thiệu tổng quan về doanh nghiệp, năng lực thi công, quy trình và công trình tiêu biểu.">
+    <link rel="icon" href="assets/logos/hth-home-logo.png">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="container-header site-header-inner">
+            <a class="site-logo" href="index.html">
+                <img src="assets/logos/hth-home-logo.png" alt="HTH HOME" width="162" height="162">
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+                <ul class="main-nav-list">
+                    <li class="main-nav-item">
+                        <a class="main-nav-link" href="index.html"><i class="fa-duotone fa-solid fa-house-blank"></i>
+                            Trang chủ</a>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-xayNhaTronGoi.html">Xây nhà trọn gói <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-xayNhaTronGoi.html">Xây nhà trọn gói</a></li>
+                            <li><a href="#">Xây nhà phần thô</a></li>
+                            <li><a href="#">Báo giá xây nhà</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="HTH-caiTaoNha.html">Cải tạo nhà <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="HTH-caiTaoNha.html">Cải tạo nhà phố</a></li>
+                            <li><a href="HTH-caiTaoNha.html">Cải tạo chung cư</a></li>
+                            <li><a href="HTH-caiTaoNha.html">Sửa chữa nhà</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-thiCong-xayDung.html">Thi công <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-thiCong-xayDung.html">Thi công phần thô</a></li>
+                            <li><a href="hth-thiCong-xayDung.html">Thi công hoàn thiện</a></li>
+                            <li><a href="hth-thiCong-xayDung.html">Thi công nội thất</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-mauNha-duAn.html">Mẫu nhà &amp; dự án <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-mauNha-duAn.html">Mẫu nhà phố</a></li>
+                            <li><a href="hth-mauNha-duAn.html">Mẫu biệt thự</a></li>
+                            <li><a href="hth-mauNha-duAn.html">Công trình thực tế</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-baiViet.html">Kiến thức <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-baiViet.html">Kinh nghiệm xây nhà</a></li>
+                            <li><a href="hth-phongThuy.html">Phong thủy</a></li>
+                            <li><a href="#">Kỹ thuật thi công</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu is-active">
+                        <a class="main-nav-link" href="hth-gioiThieu.html">Giới thiệu <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-gioiThieu.html">Về HTH HOME</a></li>
+                            <li><a href="hth-doiNgu.html">Đội ngũ</a></li>
+                            <li><a href="hth-hoSoNangLuc.html">Hồ sơ năng lực</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="site-header-actions">
+                <button class="header-search" type="button" id="searchToggle" aria-label="Tìm kiếm"
+                    aria-expanded="false" aria-controls="headerSearch">
+                    <i class="fa-light fa-magnifying-glass"></i>
+                    <i class="fa-light fa-xmark"></i>
+                </button>
+                <a class="button button-primary header-cta" href="#contact">Nhận tư vấn</a>
+                <button class="nav-toggle" type="button" id="navToggle" aria-label="Mở menu" aria-expanded="false"
+                    aria-controls="mainNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-search-panel" id="headerSearch">
+            <form class="search-form container-header" role="search" action="#" method="get">
+                <label class="visually-hidden" for="searchKeyword">Từ khoá tìm kiếm</label>
+                <input class="form-control search-input" id="searchKeyword" name="q" type="search"
+                    placeholder="Tìm mẫu nhà, dịch vụ, bài viết…" autocomplete="off">
+                <button class="button button-primary search-submit" type="submit">
+                    <i class="fa-sharp fa-light fa-magnifying-glass"></i>Tìm kiếm
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-full profile-hero-section">
+            <div class="container-custom profile-hero-inner">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                        <li><a href="hth-gioiThieu.html">Giới thiệu</a></li>
+                        <li aria-current="page">Hồ sơ năng lực</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="profile-hero-caption">
+                <p class="eyebrow eyebrow-center eyebrow-small" data-aos="fade-up">Giới thiệu công ty</p>
+                <h1 class="profile-hero-title" data-aos="fade-up">Hồ sơ năng lực</h1>
+            </div>
+        </section>
+
+        <section class="section profile-content-section">
+            <div class="container-custom">
+                <div class="profile-layout">
+                    <article class="profile-article">
+                        <h2 class="profile-heading" data-aos="fade-up">Hồ sơ năng lực</h2>
+
+                        <div class="profile-meta" data-aos="fade-up">
+                            <ul class="share-list">
+                                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                            <span class="profile-stat"><i class="fa-light fa-heart"></i>35774</span>
+                            <span class="profile-stat"><i class="fa-light fa-comment"></i>35774</span>
+                        </div>
+
+                        <p class="note-box" data-aos="fade-up">Hồ sơ năng lực công ty (hay profile công ty) là tài liệu giới thiệu tổng quan về doanh nghiệp, thường được thiết kế dưới dạng cuốn sách nhỏ khổ A4 để phục vụ cho việc đấu thầu, gặp gỡ đối tác và khách hàng.</p>
+
+                        <a class="download-bar" href="assets/files/ho-so-nang-luc-hth-home.pdf" download data-aos="fade-up">
+                            <span>Link file hồ sơ: ho-so-nang-luc.pdf</span>
+                            <i class="fa-light fa-download"></i>
+                        </a>
+
+                        <div class="profile-text" data-aos="fade-up">
+                            <h3 class="profile-text-heading">THƯ NGỎ</h3>
+                            <p>Kính gửi Quý Khách hàng và Đối tác,</p>
+                            <p>Chúng tôi thừa nhận một sự thật thường bị phớt lờ: Xây dựng hoặc cải tạo một ngôi nhà không chỉ là khoản đầu tư tài chính lớn nhất của một đời người, mà còn là một trong những thử thách tâm lý nặng nề nhất.</p>
+                            <p>Chúng ta đều thấu hiểu bối cảnh đô thị hiện tại: những ngõ phố chật hẹp, những lo âu về quy định cấp phép ngặt nghèo, nỗi sợ làm nứt vỡ nhà hàng xóm và áp lực khổng lồ từ tiếng ồn, khói bụi kéo dài ròng rã. Khách hàng thường phải vật lộn với những bản báo giá mập mờ và nỗi lo chất lượng vật tư bị đánh tráo. Xây nhà, thay vì là một hành trình hiện thực hóa ước mơ, lại dễ biến thành chuỗi ngày mất ngủ và căng thẳng tột độ.</p>
+                            <p>Tại HTH HOME, chúng tôi tin rằng quá trình kiến tạo không gian sống không nhất thiết phải đồng nghĩa với sự hỗn loạn. Bằng năng lực chuyên môn, quy trình quản lý khoa học và sự chỉnh chu trong từng chi tiết, chúng tôi hướng đến một hành trình xây nhà mà ở đó, mọi vấn đề phức tạp đều được kiểm soát và sự an tâm của khách hàng luôn được đặt lên hàng đầu.</p>
+                            <p>Chúng tôi nhận lấy trách nhiệm “quản trị mọi sự phức tạp” ở hậu trường: từ việc đảm bảo an toàn tuyệt đối cho công trình lân cận, xử lý trơn tru các thủ tục pháp lý, đến việc duy trì một công trường sạch sẽ, ngăn nắp sau mỗi ngày làm việc. Mục tiêu của chúng tôi là lọc bỏ hoàn toàn những lo âu, để lại cho chủ đầu tư một trải nghiệm mượt mà.</p>
+                            <p><strong>Lựa chọn đồng hành cùng HTH HOME, Quý vị được bảo vệ bởi 3 trụ cột giá trị:</strong><br>
+                                <strong>Sự Vững chãi &amp; An toàn:</strong><br>
+                                Không bao giờ thỏa hiệp với tiêu chuẩn kết cấu. Chúng tôi kiểm soát nghiêm ngặt vật liệu đầu vào và ứng dụng công nghệ để đảm bảo độ chính xác của nền móng, mang lại sự trường tồn cho công trình.</p>
+                            <p><strong>Sự Minh bạch Tuyệt đối:</strong><br>
+                                Ứng dụng nền tảng kỹ thuật số để quản lý dự án, cung cấp cho Quý vị quyền truy cập tiến độ và dữ liệu theo thời gian thực. Bảng chi phí được minh bạch đến từng viên gạch, triệt tiêu tối đa rủi ro gian lận và chi phí ẩn.</p>
+                            <p><strong>Sự Tinh tế:</strong><br>
+                                Sự tỉ mỉ được minh chứng qua từng đường ron gạch thẳng tắp, sự sắc nét của từng góc cạnh và nghệ thuật tối ưu hóa luồng ánh sáng tự nhiên.<br>
+                                Đích đến cuối cùng của tập thể HTH HOME không chỉ là bàn giao những khối bê tông hay sắt thép vô tri. Sản phẩm thực sự mà chúng tôi tự hào trao gửi đến Quý vị là một không gian bình yên, một tổ ấm vững chãi che chở cho nhiều thế hệ và quan trọng nhất: sự Tĩnh tại và An tâm trọn vẹn trong suốt quá trình đồng hành.</p>
+                            <p>Cảm ơn, Quý vị đã đặt trọn niềm tin vào HTH HOME để kiến tạo nên tài sản quý giá nhất của mình.</p>
+                        </div>
+                    </article>
+
+                    <aside class="profile-sidebar">
+                        <div class="support-box" data-aos="fade-left">
+                            <img class="support-box-icon" src="assets/icons/icon-customer-support.svg" alt="" width="64" height="64">
+                            <div>
+                                <p class="support-box-label">Hỗ trợ trực tuyến</p>
+                                <a class="support-box-phone" href="tel:09747455">09747455xxx</a>
+                            </div>
+                        </div>
+
+                        <form class="sidebar-form" data-aos="fade-left">
+                            <h2 class="sidebar-form-title"><i class="fa-light fa-headset"></i>Tư vấn mẫu nhà</h2>
+                            <div class="sidebar-form-body">
+                                <label class="visually-hidden" for="sideName">Họ và tên</label>
+                                <input class="form-control" id="sideName" name="name" type="text" placeholder="Họ và tên  (*)" required>
+                                <label class="visually-hidden" for="sidePhone">Số điện thoại</label>
+                                <input class="form-control" id="sidePhone" name="phone" type="tel" placeholder="Số điện thoại (*)" required>
+                                <label class="visually-hidden" for="sideEmail">Email</label>
+                                <input class="form-control" id="sideEmail" name="email" type="email" placeholder="Email (*)" required>
+                                <label class="visually-hidden" for="sideType">Loại nhà cần tư vấn</label>
+                                <select class="form-control" id="sideType" name="type" required>
+                                    <option value="">Loại nhà cần tư vấn (*)</option>
+                                    <option value="nha-pho">Nhà phố</option>
+                                    <option value="biet-thu">Biệt thự</option>
+                                    <option value="nha-cap-4">Nhà cấp 4</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                                <label class="visually-hidden" for="sideNote">Yêu cầu chi tiết</label>
+                                <textarea class="form-control" id="sideNote" name="note" rows="4" placeholder="Yêu cầu chi tiết nếu có!"></textarea>
+                                <button class="button button-primary sidebar-form-submit" type="submit">Liên hệ tư vấn <i class="fa-light fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+
+                        <a class="sidebar-banner" href="#contact" data-aos="fade-left">
+                            <img src="assets/images/design-service-banner.jpg" alt="Thiết kế thi công kiến trúc biệt thự trọn gói" loading="lazy">
+                        </a>
+                    </aside>
+                </div>
+
+                <h2 class="profile-viewer-heading" data-aos="fade-up">Xem hồ sơ năng lực</h2>
+            </div>
+
+            <div class="profile-viewer" id="profileViewer" data-aos="fade-up">
+                <div class="profile-viewer-stage">
+                    <button class="viewer-arrow viewer-arrow-prev" type="button" aria-label="Trang trước"><i class="fa-light fa-chevron-left"></i></button>
+                    <div class="profile-book" id="profileBook">
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-01.jpg"><img src="assets/images/company-profile/company-profile-page-01.jpg" alt="Hồ sơ năng lực HTH HOME - trang 1"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-02.jpg"><img src="assets/images/company-profile/company-profile-page-02.jpg" alt="Hồ sơ năng lực HTH HOME - trang 2"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-03.jpg"><img src="assets/images/company-profile/company-profile-page-03.jpg" alt="Hồ sơ năng lực HTH HOME - trang 3" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-04.jpg"><img src="assets/images/company-profile/company-profile-page-04.jpg" alt="Hồ sơ năng lực HTH HOME - trang 4" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-05.jpg"><img src="assets/images/company-profile/company-profile-page-05.jpg" alt="Hồ sơ năng lực HTH HOME - trang 5" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-06.jpg"><img src="assets/images/company-profile/company-profile-page-06.jpg" alt="Hồ sơ năng lực HTH HOME - trang 6" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-07.jpg"><img src="assets/images/company-profile/company-profile-page-07.jpg" alt="Hồ sơ năng lực HTH HOME - trang 7" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-08.jpg"><img src="assets/images/company-profile/company-profile-page-08.jpg" alt="Hồ sơ năng lực HTH HOME - trang 8" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-09.jpg"><img src="assets/images/company-profile/company-profile-page-09.jpg" alt="Hồ sơ năng lực HTH HOME - trang 9" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-10.jpg"><img src="assets/images/company-profile/company-profile-page-10.jpg" alt="Hồ sơ năng lực HTH HOME - trang 10" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-11.jpg"><img src="assets/images/company-profile/company-profile-page-11.jpg" alt="Hồ sơ năng lực HTH HOME - trang 11" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-12.jpg"><img src="assets/images/company-profile/company-profile-page-12.jpg" alt="Hồ sơ năng lực HTH HOME - trang 12" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-13.jpg"><img src="assets/images/company-profile/company-profile-page-13.jpg" alt="Hồ sơ năng lực HTH HOME - trang 13" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-14.jpg"><img src="assets/images/company-profile/company-profile-page-14.jpg" alt="Hồ sơ năng lực HTH HOME - trang 14" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-15.jpg"><img src="assets/images/company-profile/company-profile-page-15.jpg" alt="Hồ sơ năng lực HTH HOME - trang 15" loading="lazy"></div>
+                        <div class="profile-page" data-src="assets/images/company-profile/company-profile-page-16.jpg"><img src="assets/images/company-profile/company-profile-page-16.jpg" alt="Hồ sơ năng lực HTH HOME - trang 16" loading="lazy"></div>
+                    </div>
+                    <button class="viewer-arrow viewer-arrow-next" type="button" aria-label="Trang sau"><i class="fa-light fa-chevron-right"></i></button>
+                </div>
+                <div class="profile-toolbar">
+                    <button class="toolbar-button" type="button" id="viewerFullscreen" aria-label="Toàn màn hình"><i class="fa-light fa-expand"></i></button>
+                    <span class="toolbar-counter" id="viewerCounter">1/16</span>
+                    <input class="toolbar-range" id="viewerRange" type="range" min="1" max="16" value="1" aria-label="Chọn trang">
+                    <a class="toolbar-button" href="assets/files/ho-so-nang-luc-hth-home.pdf" download aria-label="Tải hồ sơ"><i class="fa-light fa-download"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-full consult-section" id="contact">
+            <div class="container-custom consult-layout">
+                <figure class="caption-figure caption-figure-brand consult-figure" data-aos="fade-right">
+                    <img src="assets/images/consult-meeting.jpg"
+                        alt="Kiến trúc sư HTH HOME trao đổi phương án thiết kế cùng khách hàng" loading="lazy">
+                    <figcaption class="caption-figure-body">
+                        <h3 class="caption-figure-title">Thiết kế kiến trúc</h3>
+                        <p class="caption-figure-text">Thiết kế kiến trúc nhà ở là quá trình sắp xếp không gian, kết
+                            cấu,
+                            hệ thống điện nước và thẩm mỹ nhằm kiến tạo không gian sống tiện nghi, bền vững theo ý tưởng
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <div class="consult-card" data-aos="fade-left">
+                    <p class="consult-overline">Bạn đang chuẩn bị xây nhà?</p>
+                    <h2 class="consult-title">Tìm mẫu nhà <span class="highlight">phù hợp chưa?</span></h2>
+                    <p class="consult-description">Để lại thông tin, đội ngũ HTH sẽ tư vấn miễn phí phương án phù hợp
+                        với nhu
+                        cầu và ngân sách của bạn</p>
+
+                    <form class="consult-form">
+                        <label class="visually-hidden" for="consultName">Họ và tên</label>
+                        <input class="form-control" id="consultName" name="name" type="text" placeholder="Họ và tên *"
+                            required>
+
+                        <label class="visually-hidden" for="consultNeed">Chọn nhu cầu của bạn</label>
+                        <select class="form-control" id="consultNeed" name="need" required>
+                            <option value="">Chọn nhu cầu của bạn &nbsp;*</option>
+                            <option value="cai-tao-kien-truc">Cải tạo kiến trúc</option>
+                            <option value="cai-tao-cong-nang">Cải tạo công năng</option>
+                            <option value="cai-tao-noi-that">Cải tạo nội thất</option>
+                            <option value="cai-tao-tong-the">Cải tạo tổng thể</option>
+                        </select>
+
+                        <span class="input-icon">
+                            <img src="assets/icons/phone.svg" alt="" width="16" height="16">
+                            <label class="visually-hidden" for="consultPhone">Số điện thoại</label>
+                            <input class="form-control" id="consultPhone" name="phone" type="tel"
+                                placeholder="Số điện thoại &nbsp;*" required>
+                        </span>
+
+                        <label class="visually-hidden" for="consultNote">Ghi chú thêm</label>
+                        <input class="form-control" id="consultNote" name="note" type="text"
+                            placeholder="Ghi chú thêm (nếu có)">
+
+                        <span class="input-icon">
+                            <img src="assets/icons/map.svg" alt="" width="18" height="16">
+                            <label class="visually-hidden" for="consultAddress">Địa chỉ xây dựng</label>
+                            <input class="form-control" id="consultAddress" name="address" type="text"
+                                placeholder="Địa chỉ xây dựng?">
+                        </span>
+
+                        <button class="button button-primary consult-submit" type="submit">Gửi yêu cầu tư vấn <i
+                                class="fa-light fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-custom">
+            <ul class="hotline-list" data-aos="fade-up">
+                <li class="hotline-card">
+                    <span class="hotline-icon"><i class="fa-light fa-user-headset"></i></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hotline tư vấn 24/7</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+                <li class="hotline-card">
+                    <span class="hotline-icon"><img src="assets/logos/Logo-Zalo.png"></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hỗ trợ và tư vấn qua Zalo</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+                <li class="hotline-card">
+                    <span class="hotline-icon"><img src="assets/logos/Logo-Zalo.png"></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hỗ trợ và tư vấn qua Zalo</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="footer-layout">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="assets/logos/hth-home-logo.png" alt="HTH HOME" width="162"
+                        height="162" loading="lazy">
+                    <ul class="social-list">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                        <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav class="footer-column" aria-label="Về HTH HOME">
+                    <h2 class="footer-title">Về HTH HOME</h2>
+                    <ul class="footer-list">
+                        <li><a href="hth-gioiThieu.html">Giới thiệu</a></li>
+                        <li><a href="hth-doiNgu.html">Đội ngũ</a></li>
+                        <li><a href="hth-hoSoNangLuc.html">Hồ sơ năng lực</a></li>
+                        <li><a href="#">Câu chuyện HTH</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-column" aria-label="Dịch vụ">
+                    <h2 class="footer-title">Dịch vụ</h2>
+                    <ul class="footer-list">
+                        <li><a href="#">Thiết kế kiến trúc</a></li>
+                        <li><a href="#">Thiết kế nội thất</a></li>
+                        <li><a href="hth-xayNhaTronGoi.html">Thi công trọn gói</a></li>
+                        <li><a href="hth-thiCong-xayDung.html">Thi công nội thất</a></li>
+                        <li><a href="HTH-caiTaoNha.html">Cải tạo – sửa chữa</a></li>
+                        <li><a href="#">Xây nhà phần thô</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-column" aria-label="Chính sách">
+                    <h2 class="footer-title">Chính sách</h2>
+                    <ul class="footer-list">
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-column footer-column-contact">
+                    <h2 class="footer-title">Thông tin liên hệ</h2>
+                    <p class="footer-company">Công ty TNHH HTH HOME</p>
+                    <p class="footer-contact-line"><img src="assets/icons/map.svg" class="img-icon" /><strong>Trụ sở
+                            chính:</strong> 284
+                        - 286 Lê Quảng Chí, P. Hòa Xuân,
+                        Đà Nẵng</p>
+                    <p class="footer-contact-line"><img src="assets/icons/phone.svg"
+                            class="img-icon" /><strong>CSKH:</strong>
+                        0834 49 08xx
+                    </p>
+                    <p class="footer-contact-line footer-contact-email"><img src="assets/icons/envelope.svg"
+                            class="img-icon" /><strong>Email:</strong> <a
+                            href="mailto:info@hthhome.com">info@hthhome.com</a>
+                    </p>
+                    <a class="footer-map" href="#" aria-label="Xem bản đồ trụ sở HTH HOME">
+                        <img src="assets/images/office-map.jpg" alt="Bản đồ trụ sở HTH HOME" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="site-copyright">Copyright © 2016 Công ty tnhh hth home. All rights reserved.</p>
+    </footer>
+
+    <nav class="contact-dock" aria-label="Liên hệ nhanh">
+        <ul class="contact-dock-list">
+            <li>
+                <a class="contact-dock-link contact-dock-facebook" href="#" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Facebook HTH HOME</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="tel:09747455">
+                    <img src="assets/icons/hotline.png" alt="">
+                    <span class="contact-dock-label">Hotline: 097474.55.xxx</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo tư vấn thiết kế</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo báo giá thi công</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link contact-dock-email" href="mailto:info@hthhome.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Email: info@hthhome.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang"><i
+            class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/page-flip/page-flip.browser.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
