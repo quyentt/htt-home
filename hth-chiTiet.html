@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thiết kế kiến trúc - HTH HOME</title>
+    <meta name="description"
+        content="Báo giá dịch vụ thiết kế kiến trúc trọn gói, minh bạch, rõ ràng tại HTH HOME: bảng giá theo loại hình công trình và các hạng mục hồ sơ đi kèm.">
+    <link rel="icon" href="assets/logos/hth-home-logo.png">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="container-header site-header-inner">
+            <a class="site-logo" href="index.html">
+                <img src="assets/logos/hth-home-logo.png" alt="HTH HOME" width="162" height="162">
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+                <ul class="main-nav-list">
+                    <li class="main-nav-item">
+                        <a class="main-nav-link" href="index.html"><i class="fa-duotone fa-solid fa-house-blank"></i>
+                            Trang chủ</a>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-xayNhaTronGoi.html">Xây nhà trọn gói <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-xayNhaTronGoi.html">Xây nhà trọn gói</a></li>
+                            <li><a href="#">Xây nhà phần thô</a></li>
+                            <li><a href="#">Báo giá xây nhà</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="HTH-caiTaoNha.html">Cải tạo nhà <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="HTH-caiTaoNha.html">Cải tạo nhà phố</a></li>
+                            <li><a href="HTH-caiTaoNha.html">Cải tạo chung cư</a></li>
+                            <li><a href="HTH-caiTaoNha.html">Sửa chữa nhà</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-thiCong-xayDung.html">Thi công <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-thiCong-xayDung.html">Thi công phần thô</a></li>
+                            <li><a href="hth-thiCong-xayDung.html">Thi công hoàn thiện</a></li>
+                            <li><a href="hth-thiCong-xayDung.html">Thi công nội thất</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-mauNha-duAn.html">Mẫu nhà &amp; dự án <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-mauNha-duAn.html">Mẫu nhà phố</a></li>
+                            <li><a href="hth-mauNha-duAn.html">Mẫu biệt thự</a></li>
+                            <li><a href="hth-mauNha-duAn.html">Công trình thực tế</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-baiViet.html">Kiến thức <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-baiViet.html">Kinh nghiệm xây nhà</a></li>
+                            <li><a href="hth-phongThuy.html">Phong thủy</a></li>
+                            <li><a href="#">Kỹ thuật thi công</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav-item has-submenu">
+                        <a class="main-nav-link" href="hth-gioiThieu.html">Giới thiệu <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="hth-gioiThieu.html">Về HTH HOME</a></li>
+                            <li><a href="hth-doiNgu.html">Đội ngũ</a></li>
+                            <li><a href="hth-hoSoNangLuc.html">Hồ sơ năng lực</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="site-header-actions">
+                <button class="header-search" type="button" id="searchToggle" aria-label="Tìm kiếm"
+                    aria-expanded="false" aria-controls="headerSearch">
+                    <i class="fa-light fa-magnifying-glass"></i>
+                    <i class="fa-light fa-xmark"></i>
+                </button>
+                <a class="button button-primary header-cta" href="#contact">Nhận tư vấn</a>
+                <button class="nav-toggle" type="button" id="navToggle" aria-label="Mở menu" aria-expanded="false"
+                    aria-controls="mainNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-search-panel" id="headerSearch">
+            <form class="search-form container-header" role="search" action="#" method="get">
+                <label class="visually-hidden" for="searchKeyword">Từ khoá tìm kiếm</label>
+                <input class="form-control search-input" id="searchKeyword" name="q" type="search"
+                    placeholder="Tìm mẫu nhà, dịch vụ, bài viết…" autocomplete="off">
+                <button class="button button-primary search-submit" type="submit">
+                    <i class="fa-sharp fa-light fa-magnifying-glass"></i>Tìm kiếm
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-full service-hero articles-hero-section">
+            <div class="container-custom articles-hero-inner">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li aria-current="page">Thiết kế kiến trúc</li>
+                    </ol>
+                </nav>
+                <h1 class="articles-hero-title" data-aos="fade-up">Thiết kế kiến trúc</h1>
+                <nav class="article-tabs" aria-label="Dịch vụ" data-aos="fade-up">
+                    <a class="article-tab is-active" href="hth-chiTiet.html"><i class="fa-light fa-pen-ruler"></i>Thiết kế kiến trúc</a>
+                    <a class="article-tab" href="hth-thiCong-xayDung.html"><i class="fa-light fa-trowel-bricks"></i>Thi công phần thô</a>
+                    <a class="article-tab" href="hth-thiCong-xayDung.html"><i class="fa-light fa-building"></i>Thi công hoàn thiện</a>
+                    <a class="article-tab" href="hth-xayNhaTronGoi.html"><i class="fa-light fa-house-user"></i>Xây nhà trọn gói</a>
+                    <a class="article-tab" href="HTH-caiTaoNha.html"><i class="fa-light fa-house-chimney-crack"></i>Cải tạo - Sửa chữa</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section detail-section">
+            <div class="container-custom">
+                <div class="detail-layout">
+                    <article class="detail-article">
+                        <h2 class="profile-heading" data-aos="fade-up">Báo giá dịch vụ thiết kế kiến trúc trọn gói, minh bạch, rõ ràng</h2>
+
+                        <div class="profile-meta" data-aos="fade-up">
+                            <ul class="share-list">
+                                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                            <span class="profile-stat"><i class="fa-light fa-heart"></i>35774</span>
+                            <span class="profile-stat"><i class="fa-light fa-comment"></i>35774</span>
+                        </div>
+
+                        <p class="note-box" data-aos="fade-up">Thiết kế kiến trúc là bước đầu quan trọng để gia chủ hiện thực tổ ấm của riêng mình. Một bản thiết kế chín chu không chỉ thể hiện thẩm mỹ mà còn quyết định công năng, tính bền vững lâu dài của ngôi nhà. Đã hoạt động thiết kế – thi công trọn gói nhiều năm,</p>
+
+                        <h3 class="detail-heading" data-aos="fade-up">1. Bảng báo giá thiết kế kiến trúc</h3>
+                        <p class="detail-text" data-aos="fade-up">Báo giá thiết kế kiến trúc là một trong những yếu tố gia chủ quan tâm khi bắt đầu lên kế hoạch xây dựng tổ ấm. Dù là báo giá thiết kế nhà phố, báo giá thiết kế nội thất hay báo giá thiết kế kiến trúc Đà Nẵng, báo giá thiết kế kiến trúc HCM, báo giá thiết kế kiến trúc tại các tỉnh thành khác trên toàn quốc SBS HOUSE luôn công khai minh bạch rõ ràng. Dựa trên đó, gia chủ dễ dàng nắm bắt và dự trù ngân sách một cách thuận tiện nhất.</p>
+
+                        <p class="detail-list-title" data-aos="fade-up"><i class="fa-solid fa-circle"></i>Bảng báo giá thiết kế nhà tại miền Trung – Bắc và Tây Nguyên:</p>
+
+                        <div class="table-scroll" data-aos="fade-up">
+                            <table class="quote-table">
+                                <thead>
+                                    <tr><th rowspan="2" scope="col" class="quote-table-type">Loại hình</th><th rowspan="2" scope="col">Nội Thất</th><th rowspan="2" scope="col">Kiến Trúc</th><th colspan="2" scope="colgroup">Trọn gói</th></tr>
+                                    <tr><th scope="col">Tiêu Chuẩn</th><th scope="col">Cao Cấp</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Nhà phố</th><td>200.000/m2</td><td>200.000/m2</td><td>280.000/m2</td><td>350.000/m2</td></tr>
+                                    <tr><th scope="row">Biệt thự, Villa</th><td>250.000/m2</td><td>250.000/m2</td><td>350.000/m2</td><td>450.000/m2</td></tr>
+                                    <tr><th scope="row">Căn hộ, Khách sạn</th><td>200.000/m2</td><td>200.000/m2</td><td>250.000/m2</td><td>300.000/m2</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="quote-table-note"><strong>Lưu ý</strong>: Đối với phong cách <strong>Cổ điển</strong> hoặc <strong>Tân cổ điển</strong>, đơn giá sẽ tăng thêm 20% so với bảng giá trên.</p>
+
+                        <div class="design-price" data-aos="fade-up">
+                            <div class="design-price-head">
+                                <h2 class="design-price-title">Bảng giá thiết kế</h2>
+                                <span class="design-price-badge">TPHCM &amp; các tỉnh lân cận</span>
+                            </div>
+                            <div class="table-scroll">
+                                <table class="design-price-table">
+                                    <thead>
+                                        <tr><th scope="col">GIÁ THIẾT KẾ (VND/m²)</th><th scope="col">NỘI THẤT</th><th scope="col">KIẾN TRÚC</th><th scope="col">TIÊU CHUẨN</th><th scope="col">CAO CẤP</th><th scope="col">SÂN VƯỜN</th><th scope="col">SÂN THƯỢNG</th></tr>
+                                    </thead>
+                                    <tbody>
+                            <tr class="design-price-row"><th scope="row">Nhà phố</th><td>250k</td><td>200k</td><td>350k</td><td>400k</td><td>100k</td><td>100k</td></tr>
+                            <tr class="design-price-row"><th scope="row">Biệt thự, Villa</th><td>300k</td><td>250k</td><td>400k</td><td>450k</td><td>150k</td><td>150k</td></tr>
+                            <tr class="design-price-row"><th scope="row">Căn hộ, khách sạn</th><td>200k</td><td>200k</td><td>300k</td><td>350k</td><td>100k</td><td>100k</td></tr>
+                            <tr><th scope="row">Tư vấn / Định hướng</th><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td></tr>
+                            <tr><th scope="row">Phong thuỷ cơ bản</th><td></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Mặt bằng công năng</th><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td></tr>
+                            <tr><th scope="row">3D mặt tiền</th><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td></tr>
+                            <tr><th scope="row">3D nội thất</th><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Khai triển kiến trúc</th><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Bản vẽ khai triển nội thất</th><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Bản vẽ kết cấu / cải tạo</th><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Bản vẽ điện nước</th><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Chú thích vật liệu</th><td></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td><td></td></tr>
+                            <tr><th scope="row">Phối cảnh 3D ngoại thất</th><td></td><td></td><td></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td></tr>
+                            <tr><th scope="row">Bản vẽ triển khai thi công ngoại thất</th><td></td><td></td><td></td><td></td><td><i class="fa-solid fa-check" aria-label="Có"></i></td><td></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="design-price-notes">
+                                <div class="design-price-note">
+                                    <h3 class="design-price-note-title">* Lưu ý</h3>
+                                    <ul class="design-price-note-list">
+                                        <li>Đối với công trình cải tạo, đơn giá thiết kế được áp dụng theo bảng giá của loại công trình tương ứng và cộng thêm chi phí khảo sát, đo đạc hiện trạng là <strong>5.000.000đ</strong>.<br><em>*Lưu ý: chi phí thẩm định kết cấu công trình cải tạo không bao gồm trong báo giá thiết kế</em></li>
+                                        <li>Với phong cách cổ điển hoặc bán cổ điển, đơn giá thiết kế sẽ tăng thêm <strong>20%</strong>.</li>
+                                        <li>Đối với công trình có tổng diện tích dưới <strong>160m²</strong>, đơn giá sẽ được nhân hệ số <strong>1.3</strong></li>
+                                        <li>Đơn giá trên chưa bao gồm thuế <strong>VAT 8%</strong></li>
+                                        <li>Tặng 1 bộ file cứng in có màu giấy A3</li>
+                                        <li>Dự toán công trình:<br>+ Nhà phố: 50.000đ/m²<br>+ Biệt thự/Villa: 100.000đ/m²</li>
+                                    </ul>
+                                    <img class="design-price-book" src="assets/images/design-brochure-book.png" alt="Hồ sơ thiết kế thi công" width="135" height="105" loading="lazy">
+                                </div>
+                                <div class="design-price-note">
+                                    <h3 class="design-price-note-title">* Các hỗ trợ MIỄN PHÍ đi kèm</h3>
+                                    <ul class="design-price-note-list">
+                                        <li>Chỉnh sửa không giới hạn trong từng giai đoạn thiết kế cho đến khi khách hàng ưng ý phương án cuối cùng.</li>
+                                        <li>Giám sát tác giả từ xa (online) trong suốt quá trình thi công: kiến trúc, kết cấu, điện nước, lựa chọn vật liệu hoàn thiện.</li>
+                                        <li>Tư vấn lựa chọn vật liệu hoàn thiện: gạch, sơn, màu sắc nội thất, đèn trang, cửa,…</li>
+                                        <li>Tư vấn kỹ thuật thi công cho chủ nhà hoặc nhà thầu trong suốt quá trình xây dựng.</li>
+                                        <li>Góp ý thi công thực tế qua hình ảnh: Chủ nhà gửi ảnh hiện trạng hàng ngày/tuần để kiến trúc sư SBS hỗ trợ nhận xét và tư vấn giải đáp.</li>
+                                        <li>Tặng quy trình thi công chuẩn, giúp khách hàng kiểm soát chất lượng khi làm việc với nhà thầu.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <figure class="detail-figure" data-aos="fade-up">
+                            <img src="assets/images/detail-construction-sunset.jpg" alt="Công trình biệt thự theo phong cách hiện đại" loading="lazy">
+                            <figcaption class="note-box note-box-light">Công trình biệt thự theo phong cách hiện đại với kiến trúc là các mảng khối vuông vức. Hai tông màu trắng – xám kết hợp hài hòa để làm nổi bật lên sắc xanh được “đan cài” ở những khoảng ban công, sân thượng.</figcaption>
+                        </figure>
+
+                        <section class="related-section">
+                            <h2 class="related-title"><span>Bài viết liên quan</span></h2>
+                            <div class="related-grid" data-aos="fade-up">
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-01.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-02.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-03.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-01.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-02.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                    <article class="related-card">
+                        <a class="related-card-image" href="#"><img src="assets/images/article-03.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                        <h3 class="related-card-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                    </article>
+                            </div>
+                        </section>
+                    </article>
+
+                    <aside class="detail-sidebar">
+                        <form class="sidebar-form detail-form" data-aos="fade-left">
+                            <h2 class="sidebar-form-title"><i class="fa-light fa-headset"></i>Nhận tư vấn ngay</h2>
+                            <div class="sidebar-form-body">
+                                <label class="visually-hidden" for="dName">Họ và tên</label>
+                                <input class="form-control" id="dName" name="name" type="text" placeholder="Họ và tên  (*)" required>
+                                <label class="visually-hidden" for="dPhone">Số điện thoại</label>
+                                <input class="form-control" id="dPhone" name="phone" type="tel" placeholder="Số điện thoại (*)" required>
+                                <label class="visually-hidden" for="dEmail">Email</label>
+                                <input class="form-control" id="dEmail" name="email" type="email" placeholder="Email (*)" required>
+                                <label class="visually-hidden" for="dArea">Diện tích sàn và số tầng</label>
+                                <input class="form-control" id="dArea" name="area" type="text" placeholder="Diện tích sàn &amp; số tầng (*)" required>
+                                <label class="visually-hidden" for="dPlace">Địa phương muốn xây</label>
+                                <input class="form-control" id="dPlace" name="place" type="text" placeholder="Địa phương muốn xây (*)" required>
+                                <label class="visually-hidden" for="dType">Loại hình xây dựng</label>
+                                <select class="form-control" id="dType" name="type" required>
+                                    <option value="">Loại hình xây dựng (*)</option>
+                                    <option value="nha-pho">Nhà phố</option>
+                                    <option value="biet-thu">Biệt thự</option>
+                                    <option value="can-ho">Căn hộ, khách sạn</option>
+                                </select>
+                                <fieldset class="budget-options">
+                                    <legend class="visually-hidden">Ngân sách dự kiến</legend>
+                                    <label class="budget-option"><input type="radio" name="budget" value="a" checked><span>2.8 - 3.3 tỷ</span></label>
+                                    <label class="budget-option"><input type="radio" name="budget" value="b"><span>3.4 - 3.9 tỷ</span></label>
+                                    <label class="budget-option"><input type="radio" name="budget" value="c"><span>2.8 - 3.3 tỷ</span></label>
+                                    <label class="budget-option"><input type="radio" name="budget" value="d"><span>3.4 - 3.9 tỷ</span></label>
+                                </fieldset>
+                                <label class="visually-hidden" for="dNote">Yêu cầu chi tiết</label>
+                                <textarea class="form-control" id="dNote" name="note" rows="4" placeholder="Yêu cầu chi tiết nếu có!"></textarea>
+                                <button class="button button-primary sidebar-form-submit" type="submit">Gửi yêu cầu! <i class="fa-light fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+
+                        <section class="featured-posts" data-aos="fade-left">
+                            <h2 class="related-title"><span>Bài viết nổi bật</span></h2>
+                            <ul class="featured-post-list">
+                        <li class="featured-post">
+                            <a class="featured-post-image" href="#"><img src="assets/images/article-01.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                            <div class="featured-post-body">
+                                <h3 class="featured-post-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                                <p class="featured-post-date"><i class="fa-light fa-calendar"></i>15/09/2026</p>
+                            </div>
+                        </li>
+                        <li class="featured-post">
+                            <a class="featured-post-image" href="#"><img src="assets/images/article-02.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                            <div class="featured-post-body">
+                                <h3 class="featured-post-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                                <p class="featured-post-date"><i class="fa-light fa-calendar"></i>15/09/2026</p>
+                            </div>
+                        </li>
+                        <li class="featured-post">
+                            <a class="featured-post-image" href="#"><img src="assets/images/article-03.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                            <div class="featured-post-body">
+                                <h3 class="featured-post-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                                <p class="featured-post-date"><i class="fa-light fa-calendar"></i>15/09/2026</p>
+                            </div>
+                        </li>
+                        <li class="featured-post">
+                            <a class="featured-post-image" href="#"><img src="assets/images/article-01.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                            <div class="featured-post-body">
+                                <h3 class="featured-post-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                                <p class="featured-post-date"><i class="fa-light fa-calendar"></i>15/09/2026</p>
+                            </div>
+                        </li>
+                        <li class="featured-post">
+                            <a class="featured-post-image" href="#"><img src="assets/images/article-03.jpg" alt="Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt" loading="lazy"></a>
+                            <div class="featured-post-body">
+                                <h3 class="featured-post-title"><a href="#">Chất Lượng Nội Thất Từ Xưởng: 7 Điểm Nhấn Tạo Sự Khác Biệt</a></h3>
+                                <p class="featured-post-date"><i class="fa-light fa-calendar"></i>15/09/2026</p>
+                            </div>
+                        </li>
+                            </ul>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-full consult-section" id="contact">
+            <div class="container-custom consult-layout">
+                <figure class="caption-figure caption-figure-brand consult-figure" data-aos="fade-right">
+                    <img src="assets/images/consult-meeting.jpg"
+                        alt="Kiến trúc sư HTH HOME trao đổi phương án thiết kế cùng khách hàng" loading="lazy">
+                    <figcaption class="caption-figure-body">
+                        <h3 class="caption-figure-title">Thiết kế kiến trúc</h3>
+                        <p class="caption-figure-text">Thiết kế kiến trúc nhà ở là quá trình sắp xếp không gian, kết
+                            cấu,
+                            hệ thống điện nước và thẩm mỹ nhằm kiến tạo không gian sống tiện nghi, bền vững theo ý tưởng
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <div class="consult-card" data-aos="fade-left">
+                    <p class="consult-overline">Bạn đang chuẩn bị xây nhà?</p>
+                    <h2 class="consult-title">Tìm mẫu nhà <span class="highlight">phù hợp chưa?</span></h2>
+                    <p class="consult-description">Để lại thông tin, đội ngũ HTH sẽ tư vấn miễn phí phương án phù hợp
+                        với nhu
+                        cầu và ngân sách của bạn</p>
+
+                    <form class="consult-form">
+                        <label class="visually-hidden" for="consultName">Họ và tên</label>
+                        <input class="form-control" id="consultName" name="name" type="text" placeholder="Họ và tên *"
+                            required>
+
+                        <label class="visually-hidden" for="consultNeed">Chọn nhu cầu của bạn</label>
+                        <select class="form-control" id="consultNeed" name="need" required>
+                            <option value="">Chọn nhu cầu của bạn &nbsp;*</option>
+                            <option value="cai-tao-kien-truc">Cải tạo kiến trúc</option>
+                            <option value="cai-tao-cong-nang">Cải tạo công năng</option>
+                            <option value="cai-tao-noi-that">Cải tạo nội thất</option>
+                            <option value="cai-tao-tong-the">Cải tạo tổng thể</option>
+                        </select>
+
+                        <span class="input-icon">
+                            <img src="assets/icons/phone.svg" alt="" width="16" height="16">
+                            <label class="visually-hidden" for="consultPhone">Số điện thoại</label>
+                            <input class="form-control" id="consultPhone" name="phone" type="tel"
+                                placeholder="Số điện thoại &nbsp;*" required>
+                        </span>
+
+                        <label class="visually-hidden" for="consultNote">Ghi chú thêm</label>
+                        <input class="form-control" id="consultNote" name="note" type="text"
+                            placeholder="Ghi chú thêm (nếu có)">
+
+                        <span class="input-icon">
+                            <img src="assets/icons/map.svg" alt="" width="18" height="16">
+                            <label class="visually-hidden" for="consultAddress">Địa chỉ xây dựng</label>
+                            <input class="form-control" id="consultAddress" name="address" type="text"
+                                placeholder="Địa chỉ xây dựng?">
+                        </span>
+
+                        <button class="button button-primary consult-submit" type="submit">Gửi yêu cầu tư vấn <i
+                                class="fa-light fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-custom">
+            <ul class="hotline-list" data-aos="fade-up">
+                <li class="hotline-card">
+                    <span class="hotline-icon"><i class="fa-light fa-user-headset"></i></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hotline tư vấn 24/7</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+                <li class="hotline-card">
+                    <span class="hotline-icon"><img src="assets/logos/Logo-Zalo.png"></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hỗ trợ và tư vấn qua Zalo</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+                <li class="hotline-card">
+                    <span class="hotline-icon"><img src="assets/logos/Logo-Zalo.png"></span>
+                    <span class="hotline-body">
+                        <span class="hotline-label">Hỗ trợ và tư vấn qua Zalo</span>
+                        <a class="hotline-number" href="tel:09747455">097474.55.xxx</a>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="footer-layout">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="assets/logos/hth-home-logo.png" alt="HTH HOME" width="162"
+                        height="162" loading="lazy">
+                    <ul class="social-list">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                        <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav class="footer-column" aria-label="Về HTH HOME">
+                    <h2 class="footer-title">Về HTH HOME</h2>
+                    <ul class="footer-list">
+                        <li><a href="hth-gioiThieu.html">Giới thiệu</a></li>
+                        <li><a href="hth-doiNgu.html">Đội ngũ</a></li>
+                        <li><a href="hth-hoSoNangLuc.html">Hồ sơ năng lực</a></li>
+                        <li><a href="#">Câu chuyện HTH</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="hth-lienHe.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-column" aria-label="Dịch vụ">
+                    <h2 class="footer-title">Dịch vụ</h2>
+                    <ul class="footer-list">
+                        <li><a href="#">Thiết kế kiến trúc</a></li>
+                        <li><a href="#">Thiết kế nội thất</a></li>
+                        <li><a href="hth-xayNhaTronGoi.html">Thi công trọn gói</a></li>
+                        <li><a href="hth-thiCong-xayDung.html">Thi công nội thất</a></li>
+                        <li><a href="HTH-caiTaoNha.html">Cải tạo – sửa chữa</a></li>
+                        <li><a href="#">Xây nhà phần thô</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-column" aria-label="Chính sách">
+                    <h2 class="footer-title">Chính sách</h2>
+                    <ul class="footer-list">
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-column footer-column-contact">
+                    <h2 class="footer-title">Thông tin liên hệ</h2>
+                    <p class="footer-company">Công ty TNHH HTH HOME</p>
+                    <p class="footer-contact-line"><img src="assets/icons/map.svg" class="img-icon" /><strong>Trụ sở
+                            chính:</strong> 284
+                        - 286 Lê Quảng Chí, P. Hòa Xuân,
+                        Đà Nẵng</p>
+                    <p class="footer-contact-line"><img src="assets/icons/phone.svg"
+                            class="img-icon" /><strong>CSKH:</strong>
+                        0834 49 08xx
+                    </p>
+                    <p class="footer-contact-line footer-contact-email"><img src="assets/icons/envelope.svg"
+                            class="img-icon" /><strong>Email:</strong> <a
+                            href="mailto:info@hthhome.com">info@hthhome.com</a>
+                    </p>
+                    <a class="footer-map" href="#" aria-label="Xem bản đồ trụ sở HTH HOME">
+                        <img src="assets/images/office-map.jpg" alt="Bản đồ trụ sở HTH HOME" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="site-copyright">Copyright © 2016 Công ty tnhh hth home. All rights reserved.</p>
+    </footer>
+
+    <nav class="contact-dock" aria-label="Liên hệ nhanh">
+        <ul class="contact-dock-list">
+            <li>
+                <a class="contact-dock-link contact-dock-facebook" href="#" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Facebook HTH HOME</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="tel:09747455">
+                    <img src="assets/icons/hotline.png" alt="">
+                    <span class="contact-dock-label">Hotline: 097474.55.xxx</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo tư vấn thiết kế</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link" href="https://zalo.me/09747455" target="_blank" rel="noopener">
+                    <img src="assets/logos/Logo-Zalo.png" alt="">
+                    <span class="contact-dock-label">Zalo báo giá thi công</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-dock-link contact-dock-email" href="mailto:info@hthhome.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span class="contact-dock-label">Email: info@hthhome.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang"><i
+            class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
