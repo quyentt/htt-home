@@ -354,7 +354,7 @@
         height: 360px;
     }
 
-    .team-collage {
+    .team-mosaic {
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: 150px;
     }
@@ -618,7 +618,7 @@
         height: 210px;
     }
 
-    .team-collage {
+    .team-mosaic {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 160px;
     }

@@ -2130,7 +2130,7 @@ select.form-control {
     font-size: 42px;
 }
 
-.team-collage {
+.team-mosaic {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 36px;
@@ -2139,6 +2139,7 @@ select.form-control {
 }
 
 .team-figure {
+    position: relative;
     overflow: hidden;
 }
 
@@ -6988,6 +6989,7 @@ body.lightbox-open {
 .charity-tile:hover .zoom-badge,
 .customer-tile:hover .zoom-badge,
 .team-collage-item:hover .zoom-badge,
+.team-figure:hover .zoom-badge,
 [data-zoom]:focus-visible .zoom-badge {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
