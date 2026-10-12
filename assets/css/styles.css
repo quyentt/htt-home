@@ -7604,8 +7604,9 @@ body.lightbox-open {
 /* ------------------------------------------------------------ contact page */
 
 .contact-hero-section {
-    background-image: linear-gradient(rgba(19, 80, 64, 0.7), rgba(19, 80, 64, 0.7)),
-        url('../images/process-consultation.jpg');
+    background-image: linear-gradient(rgba(19, 80, 64, 0.55), rgba(19, 80, 64, 0.55)),
+        url('../backgrounds/contact-hero-background.jpg');
+    background-position: center;
 }
 
 .contact-page-section {
